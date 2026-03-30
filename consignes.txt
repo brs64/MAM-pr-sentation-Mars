@@ -1,0 +1,56 @@
+
+Objectifs professionnels
+ 
+
+Cette SAÉ vous place en situation professionnelle : un commanditaire confie à votre équipe un besoin concret et attend une application opérationnelle. En semestre 5, vous livrez une première release de votre travail et en semestre 6 une version stabilisée, consolidée, documentée et déployable.
+
+Le travail se conduit comme en contexte professionnel : cadrage des spécifications, itérations courtes, décisions techniques argumentées, reporting régulier et respect des engagements. Vous devez :
+
+    livrer une application crédible et démontrable à chaque fin de semestre ;
+    travailler en équipe avec des rituels réguliers ;
+    assurer la qualité, la sécurité et la conformité aux référentiels en vigueur (RGPD, accessibilité, éco-conception).
+
+ 
+Objectifs pédagogiques
+ 
+
+La SAÉ a pour vocation de consolider tout ce que vous avez appris depuis le début de votre formation et de valider les compétences propres à votre parcours :
+
+    Parcours A - Réalisation d’applications : C1- Réaliser un développement d’application, C2 - Optimiser des applications et C6 - Collaborer au sein d’une équipe informatique ;
+    Parcours D - Intégration d’applications & management du SI : C1 - Réaliser un développement d’application, C5 - Conduire un projet et C6 - Collaborer au sein d’une équipe informatique.
+
+La SAÉ vous amène à conduire un développement de bout en bout : du recueil du besoin à la mise à disposition d’une application opérationnelle, en passant par l’architecture, le codage, les tests, la documentation et la préparation au déploiement. Vous devez également progresser aussi sur votre "posture" : argumenter vos choix techniques, travailler en équipe, rendre des comptes régulièrement et produire un travail transmissible.
+
+Deux axes sont communs à toutes les équipes :
+
+    D’une part, le développement (qui va de l'analyse aux tests ): concevoir et développer une solution juste et robuste, écrire un code propre et maintenable, appliquer les bonnes pratiques d'éco-conception, automatiser les tests essentiels et documenter ce qui est livré.
+    D’autre part, le travail en équipe et le pilotage de projet : gérer le projet et organiser le travail, utiliser Git de manière professionnelle (commits réguliers, utilisation de branches, pull requests), communiquer de façon claire et régulière vis-à-vis de votre commanditaire et faire vivre l’amélioration continue à chaque itération.
+
+Il y a ensuite des spécificités à chaque parcours :
+
+    Parcours A - Réalisation d’applications : l’accent est mis sur la qualité logicielle. Vous structurez l’application avec une architecture logicielle explicitée, vous soignez la qualité du code, mettez en place des tests automatisés pertinents et conduisez une optimisation mesurée : vous observez, vous mesurez (profiling, métriques) puis vous améliorez ce qui compte vraiment (performances, fiabilité, lisibilité) ;
+    Parcours D - Intégration d’applications & management du SI : l’enjeu est d'assembler des briques logicielles au sein d’un système d’information cohérent. Vous travaillez l'interopérabilité (API, formats d’échange, flux de données), la sécurité et la conformité, l'élaboration et la configuration des environnements (déploiement, supervision, sauvegardes), tout en assurant un pilotage de projet lisible (priorisation, suivi des risques, visibilité sur l’avancement).
+
+En fin de semestre 5, vous devez disposer d’une première "release" exploitable ; en fin de semestre 6, la version livrée est stabilisée et consolidée, assortie d’une documentation claire et d’un plan de déploiement. L’objectif, au-delà de la note, est d'acquérir des réflexes professionnels : décider en connaissance de cause, argumenter et mesurer l’impact de ses choix et livrer une solution que l’on peut maintenir et faire évoluer.
+Mise en œuvre
+ 
+
+Les équipes regroupent 4 à 6 étudiants. Par défaut elles sont homogènes (même parcours). Les rôles (relation client/PO, pilotage, référent technique, référent qualité) peuvent tourner selon les sprints.
+
+La démarche est itérative : cadrage court, backlog priorisé, jalons réguliers et démonstrations intermédiaires. Le code est versionné dans un dépôt Git d’équipe (branches, pool requests, tags...). La documentation accompagne le projet dès le départ (README d’installation, guide utilisateur, changelog, dossier d’architecture et choix techniques).
+
+    qualité : tests unitaires/fonctionnels, CI, revues de code ;
+    conformité : sécurité, RGPD, accessibilité, éco-conception ;
+    transparence : décisions et sources référencées dans le dépôt.
+
+Suivi et évaluation
+ 
+
+La SAÉ s’étend sur deux semestres avec des poids distincts. En S5 (SAÉ S.5.01), elle compte pour 50 % dans chacune des compétences évaluées (parcours A : C1, C2, C6 ; parcours D : C1, C5, C6). En S6 (SAÉ S.6.01), elle pèse 10 % dans ces mêmes compétences. S5 vise la première release utilisable ; S6 la stabilisation, la consolidation et la livraison finale.
+
+Des points intermédiaires sont planifiés avec les deux enseignants responsables de parcours (démo courte, revue du backlog, suivi de la qualité). Chaque semestre se conclut par une soutenance avec démonstration en direct (pas de vidéos ou de copies écran).
+
+    fin S5 : démo + dossier (contexte, conception (modélisation du SI), architecture, choix technologiques) ;
+    fin S6 : version stabilisée & consolidée, tests renforcés, plan de déploiement, soutenance finale ;
+    l’évaluation distingue le résultat (ce qui est livré) et la démarche (comment vous y êtes parvenus).
+

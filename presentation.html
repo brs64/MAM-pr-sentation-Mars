@@ -1,0 +1,611 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+	<meta charset="utf-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+	<title>BTSPlay - Présentation Finale S6 - Parcours D</title>
+
+	<link rel="stylesheet" href="dist/reset.css" />
+	<link rel="stylesheet" href="dist/reveal.css" />
+	<link rel="stylesheet" href="dist/theme/white.css" />
+	<link rel="stylesheet" href="dist/plugin/highlight/monokai.css" />
+
+	<style>
+		.reveal {
+			font-size: 36px;
+		}
+
+		.reveal h1, .reveal h2, .reveal h3 {
+			text-transform: none;
+		}
+
+		.reveal h1 {
+			font-size: 2.2em;
+		}
+
+		.reveal h2 {
+			font-size: 1.6em;
+			color: #2C3E50;
+			margin-bottom: 0.5em;
+		}
+
+		.reveal h3 {
+			font-size: 1.2em;
+		}
+
+		.reveal p, .reveal li {
+			font-size: 0.85em;
+			line-height: 1.5;
+		}
+
+		.reveal .feature-grid {
+			display: grid;
+			grid-template-columns: repeat(2, 1fr);
+			gap: 1em;
+			margin-top: 1em;
+		}
+
+		.reveal .feature-item {
+			background: #f8f9fa;
+			padding: 0.8em;
+			border-radius: 6px;
+			border-left: 3px solid #E6A23C;
+			text-align: left;
+		}
+
+		.reveal .feature-item h3 {
+			color: #2C3E50;
+			font-size: 1em;
+			margin-bottom: 0.3em;
+			font-weight: 600;
+		}
+
+		.reveal .feature-item p {
+			font-size: 0.75em;
+			margin: 0;
+			color: #555;
+		}
+
+		.reveal .feature-item ul {
+			font-size: 0.75em;
+		}
+
+		.reveal .tech-badge {
+			display: inline-block;
+			background: #2C3E50;
+			color: white;
+			padding: 0.2em 0.6em;
+			border-radius: 4px;
+			font-size: 0.55em;
+			margin: 0.2em;
+		}
+
+		.reveal .demo-container {
+			width: 95%;
+			height: 500px;
+			border: 2px solid #2C3E50;
+			border-radius: 6px;
+			overflow: hidden;
+			margin: 0 auto;
+		}
+
+		.reveal .demo-container iframe {
+			width: 100%;
+			height: 100%;
+			border: none;
+		}
+
+		.reveal .highlight-box {
+			background: #E6A23C;
+			color: white;
+			padding: 0.8em;
+			border-radius: 6px;
+			margin-top: 1em;
+		}
+
+		.reveal .highlight-box p {
+			margin: 0;
+			font-size: 0.8em;
+		}
+
+		.reveal .team-list {
+			text-align: left;
+			margin: 0.5em auto;
+			max-width: 500px;
+			columns: 2;
+		}
+
+		.reveal .team-list li {
+			margin: 0.3em 0;
+			font-size: 0.65em;
+		}
+
+		.reveal strong {
+			color: #E6A23C;
+		}
+
+		.reveal .subtitle {
+			color: #666;
+			font-size: 0.6em;
+			margin-top: 0.8em;
+		}
+
+		.reveal ul {
+			margin: 0.5em 0;
+		}
+
+		.reveal .intro-bg {
+			background-color: #2C3E50;
+		}
+
+		.reveal .conclusion-bg {
+			background-color: #2C3E50;
+		}
+
+		.reveal .section-title {
+			border-bottom: 3px solid #E6A23C;
+			padding-bottom: 0.3em;
+			display: inline-block;
+		}
+
+		.reveal code {
+			background: #f4f4f4;
+			padding: 0.1em 0.4em;
+			border-radius: 3px;
+			font-size: 0.8em;
+		}
+
+		.reveal .progress-box {
+			background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+			color: white;
+			padding: 1em;
+			border-radius: 8px;
+			margin: 1em 0;
+		}
+
+		.reveal .comparison-grid {
+			display: grid;
+			grid-template-columns: 1fr 1fr;
+			gap: 1.5em;
+			margin-top: 1.5em;
+		}
+
+		.reveal .comparison-item {
+			background: #f8f9fa;
+			padding: 1em;
+			border-radius: 8px;
+			border-top: 4px solid #E6A23C;
+		}
+
+		.reveal .comparison-item h3 {
+			font-size: 1em;
+			margin-bottom: 0.5em;
+			color: #E6A23C;
+		}
+
+		.reveal .comparison-item ul {
+			font-size: 0.8em;
+		}
+
+		.reveal .check-icon {
+			color: #27ae60;
+			font-weight: bold;
+			margin-right: 0.3em;
+		}
+	</style>
+</head>
+<body>
+	<div class="reveal">
+		<div class="slides">
+
+			<!-- SLIDE 1: INTRO -->
+			<section class="intro-bg">
+				<img src="logo_BTS_Play.png" alt="BTSPlay Logo" style="width: 180px; height: auto; margin-bottom: 1em;">
+				<h1 style="color: white;">
+					BTSPlay - Semestre 6
+				</h1>
+				<h2 style="color: #E6A23C; margin-top: 0.5em;">
+					Présentation Finale - Parcours D
+				</h2>
+				<p style="color: rgba(255,255,255,0.9); margin-top: 1.5em;">
+					Consolidation, Stabilisation et Déploiement<br/>
+					Media Asset Manager pour le BTS Audiovisuel
+				</p>
+				<p class="subtitle" style="color: rgba(255,255,255,0.7); margin-top: 2em;">
+					SAÉ S.6.01 - BUT Informatique 3 - IUT de Bayonne<br/>
+					Mars 2026
+				</p>
+			</section>
+
+			<!-- SLIDE 2: L'ÉQUIPE -->
+			<section>
+				<h2 class="section-title">L'Équipe</h2>
+				<div style="margin-top: 1.5em;">
+					<p style="color: #666; margin-bottom: 1.2em; font-size: 0.9em;">
+						5 étudiants de <strong>BUT Informatique 3 - Parcours D</strong>
+					</p>
+					<ul class="team-list" style="font-size: 0.8em;">
+						<li><strong>BAROS Arthur</strong> - Product Owner & Communication</li>
+						<li><strong>HAMCHOUCHE Kamelia</strong> - Scrum Master & Documentation</li>
+						<li><strong>LOUSTAU-CAZAUX David</strong> - Référent Technique</li>
+						<li><strong>LUCAS Liam</strong> - Référent Qualité & Sécurité</li>
+						<li><strong>NUNEZ RODRIGUEZ Laura Elena</strong> - Référente Frontend</li>
+					</ul>
+					<div class="highlight-box" style="margin-top: 1.5em;">
+						<p style="font-size: 0.8em;">
+							<strong>IUT de Bayonne</strong> - SAÉ S.6.01 - Mars 2026<br/>
+							<a href="https://github.com/brs64/Media-Asset-Manager" style="color: white; text-decoration: underline;" target="_blank">
+								github.com/brs64/Media-Asset-Manager
+							</a>
+						</p>
+					</div>
+				</div>
+			</section>
+
+			<!-- SLIDE 3: RAPPEL S5 -->
+			<section>
+				<h2 class="section-title">Rappel : Semestre 5</h2>
+				<div style="text-align: left; max-width: 850px; margin: 1em auto;">
+					<p style="margin-bottom: 1em;">
+						Au <strong>Semestre 5</strong>, nous avons livré la première release fonctionnelle :
+					</p>
+					<div class="feature-grid">
+						<div class="feature-item">
+							<h3>✓ Refonte complète</h3>
+							<p>Migration vers Laravel 12, architecture MVC, API FFAStrans</p>
+						</div>
+						<div class="feature-item">
+							<h3>✓ Optimisation algorithmique</h3>
+							<p>Jobs asynchrones : indexation de 4203 vidéos en 23 minutes</p>
+						</div>
+						<div class="feature-item">
+							<h3>✓ Gestion de projet</h3>
+							<p>Jira, GitHub, sprints de 2 semaines, méthode agile</p>
+						</div>
+						<div class="feature-item">
+							<h3>✓ Collaboration</h3>
+							<p>Pair programming, code reviews, Laravel Pint</p>
+						</div>
+					</div>
+					<div class="highlight-box">
+						<p>
+							<strong>Objectif S6 :</strong> Stabiliser, consolider, documenter et préparer au déploiement production
+						</p>
+					</div>
+				</div>
+			</section>
+
+			<!-- SLIDE 3: PARCOURS D - SPÉCIFICITÉS -->
+			<section>
+				<h2 class="section-title">Parcours D : Intégration & Management SI</h2>
+				<div style="text-align: left; max-width: 850px; margin: 1em auto;">
+					<p style="margin-bottom: 1em;">
+						Le <strong>Parcours D</strong> met l'accent sur l'assemblage de briques logicielles dans un SI cohérent :
+					</p>
+					<div class="feature-grid">
+						<div class="feature-item">
+							<h3>Interopérabilité</h3>
+							<p>API FFAStrans, formats d'échange (MXF/MP4), flux de données entre NAS</p>
+						</div>
+						<div class="feature-item">
+							<h3>Sécurité & Conformité</h3>
+							<p>VPN, hachage mots de passe, Eloquent ORM, politiques de sécurité</p>
+						</div>
+						<div class="feature-item">
+							<h3>Environnements & Déploiement</h3>
+							<p>Docker Compose, supervision, sauvegardes automatiques</p>
+						</div>
+						<div class="feature-item">
+							<h3>Pilotage de projet</h3>
+							<p>Priorisation, suivi des risques, visibilité sur l'avancement (Jira)</p>
+						</div>
+					</div>
+				</div>
+			</section>
+
+			<!-- SLIDE 4: C1 - DÉVELOPPEMENT S6 -->
+			<section>
+				<h2 class="section-title">C1 : Développement d'Application - S6</h2>
+				<div style="text-align: left; max-width: 850px; margin: 1em auto;">
+					<div class="feature-grid">
+						<div class="feature-item">
+							<h3>Tests Automatiques</h3>
+							<p>PHPUnit - 10+ tests (services, controllers, API FFAStrans, streaming HLS)</p>
+						</div>
+						<div class="feature-item">
+							<h3>Documentation Code</h3>
+							<p>Doxygen + PHPDoc - Documentation HTML complète avec diagrammes</p>
+						</div>
+						<div class="feature-item">
+							<h3>Optimisation Architecture</h3>
+							<p>Volume miniatures dédié, chemins consolidés, clearLocalFiles() corrigé</p>
+						</div>
+						<div class="feature-item">
+							<h3>Transcodage Avancé</h3>
+							<p>Déclenchement par dossier, filtre contenus transcodés, jobs testés</p>
+						</div>
+					</div>
+					<div class="highlight-box" style="margin-top: 1em;">
+						<p style="font-size: 0.85em;">
+							<strong>Qualité renforcée :</strong> Code homogénéisé (Laravel Pint), tests automatisés, documentation transmissible
+						</p>
+					</div>
+				</div>
+			</section>
+
+			<!-- SLIDE 5: C5 - GESTION DE PROJET S6 -->
+			<section>
+				<h2 class="section-title">C5 : Conduire un Projet - S6</h2>
+				<div class="comparison-grid">
+					<div class="comparison-item">
+						<h3>Semestre 5</h3>
+						<ul style="font-size: 0.75em; margin-left: 1.5em; margin-top: 0.5em; line-height: 1.7;">
+							<li>Backlog désordonné</li>
+							<li>Tickets vagues</li>
+							<li>Distribution compliquée</li>
+							<li>Mode réactif</li>
+						</ul>
+					</div>
+					<div class="comparison-item">
+						<h3>Semestre 6</h3>
+						<ul style="font-size: 0.75em; margin-left: 1.5em; margin-top: 0.5em; line-height: 1.7;">
+							<li><span class="check-icon">✓</span> Tableau kanban structuré</li>
+							<li><span class="check-icon">✓</span> Respect des échéances</li>
+							<li><span class="check-icon">✓</span> Contributions équilibrées</li>
+							<li><span class="check-icon">✓</span> MVP livré à temps</li>
+						</ul>
+					</div>
+				</div>
+				<div class="progress-box" style="margin-top: 1.5em;">
+					<p style="font-size: 0.85em; margin: 0;">
+						<strong>Livrables S6 :</strong> Version stabilisée · Documentation complète · Plan de déploiement · Tests renforcés
+					</p>
+				</div>
+			</section>
+
+			<!-- SLIDE 6: C6 - COLLABORATION S6 -->
+			<section>
+				<h2 class="section-title">C6 : Collaboration - S6</h2>
+				<div style="text-align: left; max-width: 850px; margin: 1em auto;">
+					<div class="feature-grid">
+						<div class="feature-item">
+							<h3>Code Reviews Systématiques</h3>
+							<p>Branche master protégée - Review obligatoire par un autre développeur avant merge</p>
+						</div>
+						<div class="feature-item">
+							<h3>Documentation Collaborative</h3>
+							<p>PHPDoc partagée - Chaque développeur documente son code pour les autres</p>
+						</div>
+						<div class="feature-item">
+							<h3>Tests Collaboratifs</h3>
+							<p>Tests croisés - Validation des fonctionnalités par plusieurs membres</p>
+						</div>
+						<div class="feature-item">
+							<h3>Pair Programming</h3>
+							<p>Sessions régulières - Résolution de bugs complexes en binôme</p>
+						</div>
+					</div>
+					<div class="highlight-box">
+						<p>
+							<strong>Résultat :</strong> Intégrations fluides, peu de conflits, décisions tracées immédiatement
+						</p>
+					</div>
+				</div>
+			</section>
+
+			<!-- SLIDE 7: ARCHITECTURE DOCKER -->
+			<section>
+				<h2 class="section-title">Architecture & Déploiement</h2>
+				<div style="text-align: left; max-width: 850px; margin: 0 auto;">
+					<div class="feature-item" style="margin: 0.8em 0;">
+						<h3>Services Docker Consolidés (7 conteneurs)</h3>
+						<ul style="font-size: 0.75em; margin-top: 0.5em; margin-left: 1.5em; line-height: 1.6;">
+							<li><strong>btsplay-laravel</strong> - Application PHP-FPM</li>
+							<li><strong>btsplay-queue</strong> - Worker de transcodage asynchrone</li>
+							<li><strong>btsplay-nginx</strong> - Reverse proxy (port 8080)</li>
+							<li><strong>btsplay-mysql</strong> - Base de données MySQL 5.7</li>
+							<li><strong>btsplay-phpmyadmin</strong> - Administration DB (port 8001)</li>
+							<li><strong>btsplay-ftp-pad</strong> - FTP pour MXF (port 21001)</li>
+							<li><strong>btsplay-ftp-arch</strong> - FTP pour MP4 (port 21002)</li>
+						</ul>
+					</div>
+					<div class="highlight-box" style="margin-top: 1em;">
+						<p style="font-size: 0.85em;">
+							<strong>Volumes persistants :</strong> dbdata, ftp-pad-data, ftp-arch-data, /mnt/archivage, /mnt/miniatures
+						</p>
+					</div>
+				</div>
+			</section>
+
+			<!-- SLIDE 8: DÉMO -->
+			<section>
+				<h2 class="section-title">Démonstration Live</h2>
+				<p style="color: #666; margin-bottom: 0.5em;">
+					Application en action sur <code>localhost:8080</code>
+				</p>
+				<div class="demo-container">
+					<iframe src="http://localhost:8080" title="BTSPlay Demo"></iframe>
+				</div>
+				<p style="font-size: 0.6em; color: #999; margin-top: 0.5em;">
+					💡 Pour lancer : <code>docker compose up</code>
+				</p>
+			</section>
+
+			<!-- SLIDE 9: SÉCURITÉ & CONFORMITÉ -->
+			<section>
+				<h2 class="section-title">Sécurité & Conformité - Parcours D</h2>
+				<div class="comparison-grid">
+					<div class="comparison-item">
+						<h3>Sécurité Application</h3>
+						<ul style="font-size: 0.65em; margin-left: 1.5em; margin-top: 0.5em; line-height: 1.6;">
+							<li>Isolation des services Docker</li>
+							<li>Hachage des mots de passe (bcrypt)</li>
+							<li>Eloquent ORM anti-injection SQL</li>
+							<li>CSRF protection Laravel</li>
+							<li>Spatie Permissions (rôles granulaires)</li>
+						</ul>
+					</div>
+					<div class="comparison-item">
+						<h3>Sécurité Infrastructure</h3>
+						<ul style="font-size: 0.65em; margin-left: 1.5em; margin-top: 0.5em; line-height: 1.6;">
+							<li>VPN pour accès distant sécurisé</li>
+							<li>Politiques de sécurité Windows Server</li>
+							<li>Pare-feu et ports restreints</li>
+							<li>FTP authentifié (Pure-FTPd)</li>
+							<li>Nginx reverse proxy</li>
+						</ul>
+					</div>
+				</div>
+				<div class="highlight-box" style="margin-top: 1em;">
+					<p>
+						<strong>Conformité RGPD :</strong> Gestion des données personnelles, consentements, droit à l'oubli
+					</p>
+				</div>
+			</section>
+
+			<!-- SLIDE 10: SOBRIÉTÉ NUMÉRIQUE -->
+			<section>
+				<h2 class="section-title">Sobriété Numérique & Éco-conception</h2>
+				<div style="text-align: left; max-width: 850px; margin: 1em auto;">
+					<div class="feature-grid">
+						<div class="feature-item">
+							<h3>Génération Asynchrone</h3>
+							<p>Jobs en arrière-plan - Miniatures générées à la demande uniquement</p>
+						</div>
+						<div class="feature-item">
+							<h3>Lazy Loading</h3>
+							<p>Chargement progressif - Ressources chargées uniquement si visibles</p>
+						</div>
+						<div class="feature-item">
+							<h3>Compression Images</h3>
+							<p>Miniatures JPEG optimisées - 10x moins lourdes que les PNG</p>
+						</div>
+						<div class="feature-item">
+							<h3>Streaming Adaptatif</h3>
+							<p>HLS segmenté - Bande passante ajustée à la qualité de connexion</p>
+						</div>
+					</div>
+					<div class="highlight-box">
+						<p>
+							<strong>Impact :</strong> Réduction de l'empreinte carbone et optimisation des ressources serveur
+						</p>
+					</div>
+				</div>
+			</section>
+
+			<!-- SLIDE 11: BILAN S6 -->
+			<section>
+				<h2 class="section-title">Bilan Semestre 6</h2>
+				<div style="text-align: left; max-width: 850px; margin: 1em auto;">
+					<div class="feature-grid">
+						<div class="feature-item">
+							<h3>✓ Application Stabilisée</h3>
+							<p>Tests PHPUnit · Bugs résolus · Architecture optimisée · Code homogénéisé</p>
+						</div>
+						<div class="feature-item">
+							<h3>✓ Documentation Complète</h3>
+							<p>README · Doxygen technique · Dossier architecture · Plan déploiement</p>
+						</div>
+						<div class="feature-item">
+							<h3>✓ Prêt pour Production</h3>
+							<p>Docker Compose · VPN + sécurité · Sauvegardes auto · Logs</p>
+						</div>
+						<div class="feature-item">
+							<h3>🔮 Perspectives Futures</h3>
+							<p>CI/CD · Monitoring (Grafana) · Notifications push · API REST</p>
+						</div>
+					</div>
+					<div class="highlight-box" style="margin-top: 1em;">
+						<p style="font-size: 0.85em;">
+							<strong>Du S5 au S6 :</strong> De la première release fonctionnelle à l'application production-ready documentée et testée
+						</p>
+					</div>
+				</div>
+			</section>
+
+			<!-- SLIDE 12: POINTS FORTS -->
+			<section>
+				<h2 class="section-title">Points Forts du Projet</h2>
+				<div class="feature-grid">
+					<div class="feature-item">
+						<h3>Qualité Logicielle</h3>
+						<p>Tests automatiques, documentation Doxygen, code homogénéisé (Laravel Pint)</p>
+					</div>
+					<div class="feature-item">
+						<h3>Sécurité</h3>
+						<p>VPN, hachage, Eloquent ORM, permissions granulaires, isolation Docker</p>
+					</div>
+					<div class="feature-item">
+						<h3>Performance</h3>
+						<p>Jobs asynchrones, lazy loading, streaming HLS, miniatures compressées</p>
+					</div>
+					<div class="feature-item">
+						<h3>Déploiement</h3>
+						<p>Docker Compose production-ready, volumes persistants, sauvegardes auto</p>
+					</div>
+					<div class="feature-item">
+						<h3>Interopérabilité</h3>
+						<p>API FFAStrans, formats MXF/MP4, réconciliation NAS, FTP sécurisé</p>
+					</div>
+					<div class="feature-item">
+						<h3>Pilotage Projet</h3>
+						<p>Jira structuré, sprints 2 semaines, contributions équilibrées, livraison MVP</p>
+					</div>
+				</div>
+				<div class="highlight-box" style="margin-top: 1em;">
+					<p>
+						Solution <strong>production-ready</strong> répondant aux besoins réels du BTS Audiovisuel
+					</p>
+				</div>
+			</section>
+
+			<!-- SLIDE 13: CONCLUSION -->
+			<section class="conclusion-bg">
+				<img src="logo_BTS_Play.png" alt="BTSPlay Logo" style="width: 150px; height: auto; margin-bottom: 0.8em; opacity: 0.9;">
+				<h2 style="color: white;">BTSPlay - Semestre 6</h2>
+				<div style="color: white; margin-top: 1.5em; line-height: 1.8; font-size: 0.9em;">
+					<p>✓ Application stabilisée et consolidée</p>
+					<p>✓ Documentation complète (technique et utilisateur)</p>
+					<p>✓ Tests automatiques en place</p>
+					<p>✓ Prête pour le déploiement en production</p>
+					<p>✓ Parcours D : Intégration, Sécurité, Déploiement maîtrisés</p>
+				</div>
+				<div style="margin-top: 2em; padding: 1em; background: rgba(255,255,255,0.1); border-radius: 6px;">
+					<h3 style="color: white; font-size: 1.3em; margin-bottom: 0.5em;">Merci de votre attention !</h3>
+					<p style="color: rgba(255,255,255,0.9); margin: 0; font-size: 0.85em;">
+						Des questions ?
+					</p>
+				</div>
+			</section>
+
+		</div>
+	</div>
+
+	<script src="dist/reveal.js"></script>
+	<script src="dist/plugin/notes.js"></script>
+	<script src="dist/plugin/markdown.js"></script>
+	<script src="dist/plugin/highlight.js"></script>
+	<script>
+		Reveal.initialize({
+			hash: true,
+			transition: 'slide',
+			transitionSpeed: 'default',
+			backgroundTransition: 'slide',
+
+			// Config
+			controls: true,
+			progress: true,
+			center: true,
+			slideNumber: true,
+
+			// Navigation verticale pour les détails
+			navigationMode: 'default',
+
+			// Vue d'ensemble avec Esc
+			overview: true,
+
+			plugins: [RevealMarkdown, RevealHighlight, RevealNotes]
+		});
+	</script>
+</body>
+</html>
