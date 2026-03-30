@@ -104,6 +104,10 @@
 			font-size: 0.7em;
 		}
 
+		.reveal .highlight-box strong {
+			color: white;
+		}
+
 		.reveal .team-list {
 			text-align: left;
 			margin: 0.5em auto;
@@ -167,372 +171,116 @@
 				</h2>
 				<p style="color: rgba(255,255,255,0.9); margin-top: 1.5em;">
 					Solution professionnelle de gestion d'actifs vidéo<br/>
-					pour le BTS Audiovisuel de Biarritz
+					pour le BTS Audiovisuel du Lycée René Cassin
 				</p>
 				<p class="subtitle" style="color: rgba(255,255,255,0.7); margin-top: 2em;">
-					Projet SAE - BUT Informatique 3 - IUT de Bayonne
+					SAÉ S.6.01 - BUT Informatique 3 Parcours D - IUT de Bayonne<br/>
+					2025 - 2026
 				</p>
 			</section>
 
-			<!-- SLIDE 2: LE CONTEXTE -->
+			<!-- ======================== -->
+			<!-- PARTIE 1: INTRODUCTIVE  -->
+			<!-- ======================== -->
+
+			<!-- LE CONTEXTE -->
 			<section>
 				<h2 class="section-title">Le Contexte</h2>
 				<div style="text-align: left; max-width: 850px; margin: 1em auto;">
 					<p>
-						Le <strong>BTS Audiovisuel de Biarritz</strong> produit quotidiennement des contenus vidéo professionnels stockés sur <strong>deux serveurs NAS distincts</strong>
+						Le <strong>BTS Audiovisuel du Lycée René Cassin</strong> produit quotidiennement des contenus vidéo professionnels stockés sur <strong>deux serveurs NAS distincts</strong>. Reprise d'un projet initié en 2024-2025 dont la livraison n'était pas exploitable.
 					</p>
 					<div class="feature-grid" style="margin-top: 1.5em;">
 						<div class="feature-item">
-							<h3>NAS MXF</h3>
-							<p>Format broadcast professionnel - Qualité maximale pour le montage</p>
+							<h3>NAS PAD (MXF)</h3>
+							<p>XDCAM HD 50Mb/s - Prêt à Diffuser, qualité maximale pour le montage</p>
 						</div>
 						<div class="feature-item">
-							<h3>NAS MP4</h3>
-							<p>H.264 25Mbps - Diffusion et consultation web</p>
+							<h3>NAS Archivage (MP4)</h3>
+							<p>H.264 25Mb/s - Archivage et consultation web</p>
 						</div>
 					</div>
 					<div class="highlight-box">
 						<p>
-							<strong>Mission :</strong> Créer une plateforme unifiée permettant aux étudiants et enseignants d'accéder, rechercher et gérer facilement ces contenus vidéo
+							<strong>Mission :</strong> Développer un MAM adapté aux besoins du BTS : détection et indexation des fichiers sur les NAS, enrichissement de métadonnées, visualisation web, et transfert/transcodage via FFAStrans
 						</p>
 					</div>
 				</div>
 			</section>
 
-			<!-- SLIDE 3: FONCTIONNALITÉS -->
+			<!-- SLIDE 3: L'ÉQUIPE -->
 			<section>
-				<section>
-					<h2 class="section-title">Fonctionnalités Clés</h2>
-					<div class="feature-grid">
-						<div class="feature-item fragment fade-up">
-							<h3>Découverte & Indexation</h3>
-							<p>Indexation automatique des vidéos sur les deux NAS avec réconciliation intelligente</p>
-						</div>
-						<div class="feature-item fragment fade-up">
-							<h3>Lecture Vidéo Web</h3>
-							<p>Streaming HLS adaptatif avec génération de miniatures</p>
-						</div>
-						<div class="feature-item fragment fade-up">
-							<h3>Transcodage Professionnel</h3>
-							<p>Intégration FFAStrans pour conversion MXF ↔ MP4</p>
-						</div>
-						<div class="feature-item fragment fade-up">
-							<h3>Gestion des Utilisateurs</h3>
-							<p>Authentification et permissions (Étudiants, Professeurs, Admins)</p>
-						</div>
-						<div class="feature-item fragment fade-up">
-							<h3>Recherche Avancée</h3>
-							<p>Moteur de recherche avec autocomplétion et filtres</p>
-						</div>
-						<div class="feature-item fragment fade-up">
-							<h3>Panel Administrateur</h3>
-							<p>Synchronisation, réconciliation, logs, backups et import CSV</p>
-						</div>
-					</div>
-					<p style="font-size: 0.6em; color: #999; margin-top: 1em;">
-						⬇️ Détails des fonctionnalités utilisateurs
-					</p>
-				</section>
-
-				<!-- Sous-section: Interface Utilisateur -->
-				<section>
-					<h3 style="color: #2C3E50; border-bottom: 2px solid #E6A23C; padding-bottom: 0.3em; display: inline-block;">Interface Utilisateur</h3>
-					<div style="text-align: left; max-width: 800px; margin: 1em auto;">
-						<div class="feature-item fragment fade-in">
-							<p style="font-size: 0.7em; line-height: 1.6;"><strong>Navigation intuitive :</strong></p>
-							<ul style="font-size: 0.65em; margin-left: 1.5em; margin-top: 0.5em;">
-								<li>Grille de vidéos avec miniatures générées automatiquement</li>
-								<li>Barre de recherche avec suggestions en temps réel</li>
-								<li>Filtres par promotion, type, thème</li>
-								<li>Explorateur de fichiers pour parcourir les NAS</li>
-							</ul>
-						</div>
-						<div class="feature-item fragment fade-in" style="margin-top: 1em;">
-							<p style="font-size: 0.7em; line-height: 1.6;"><strong>Lecteur vidéo intégré :</strong></p>
-							<ul style="font-size: 0.65em; margin-left: 1.5em; margin-top: 0.5em;">
-								<li>Player Plyr avec contrôles personnalisés</li>
-								<li>Streaming HLS pour lecture adaptative</li>
-								<li>Affichage des métadonnées (titre, description, participants)</li>
-								<li>Téléchargement direct si autorisé</li>
-							</ul>
-						</div>
-					</div>
-				</section>
-
-				<!-- Sous-section: Panel Admin -->
-				<section>
-					<h3 style="color: #2C3E50; border-bottom: 2px solid #E6A23C; padding-bottom: 0.3em; display: inline-block;">Panel Administrateur</h3>
-					<div style="text-align: left; max-width: 800px; margin: 1em auto;">
-						<div class="feature-item fragment fade-in">
-							<p style="font-size: 0.7em; line-height: 1.6;"><strong>Onglet Database :</strong></p>
-							<ul style="font-size: 0.65em; margin-left: 1.5em; margin-top: 0.5em;">
-								<li>Synchronisation manuelle ou automatique des NAS</li>
-								<li>Mise à jour des métadonnées en masse</li>
-								<li>Logs de synchronisation en temps réel</li>
-							</ul>
-						</div>
-						<div class="feature-item fragment fade-in" style="margin-top: 0.8em;">
-							<p style="font-size: 0.7em; line-height: 1.6;"><strong>Onglet Transferts :</strong></p>
-							<ul style="font-size: 0.65em; margin-left: 1.5em; margin-top: 0.5em;">
-								<li>Visualisation des jobs de transcodage en cours</li>
-								<li>Historique des conversions MXF/MP4</li>
-								<li>Annulation et relance de jobs</li>
-							</ul>
-						</div>
-						<div class="feature-item fragment fade-in" style="margin-top: 0.8em;">
-							<p style="font-size: 0.7em; line-height: 1.6;"><strong>Onglet Users :</strong></p>
-							<ul style="font-size: 0.65em; margin-left: 1.5em; margin-top: 0.5em;">
-								<li>Gestion des rôles et permissions</li>
-								<li>Import CSV d'étudiants par promotion</li>
-								<li>Attribution de droits granulaires</li>
-							</ul>
-						</div>
-					</div>
-				</section>
-			</section>
-
-			<!-- SLIDE 4: STACK TECHNIQUE -->
-			<section>
-				<h2 class="section-title">Stack Technique</h2>
+				<h2 class="section-title">L'Équipe</h2>
 				<div style="margin-top: 1em;">
-					<h3 class="fragment fade-in" style="color: #2C3E50; margin-bottom: 0.5em; font-size: 0.9em;">Backend</h3>
-					<div class="fragment fade-in">
-						<span class="tech-badge">Laravel 12</span>
-						<span class="tech-badge">PHP 8.2+</span>
-						<span class="tech-badge">MySQL 5.7</span>
-						<span class="tech-badge">Laravel Breeze</span>
-						<span class="tech-badge">FFAStrans API</span>
-						<span class="tech-badge">Spatie Permissions</span>
-					</div>
-
-					<h3 class="fragment fade-in" style="color: #2C3E50; margin: 1em 0 0.5em; font-size: 0.9em;">Frontend</h3>
-					<div class="fragment fade-in">
-						<span class="tech-badge">Vite</span>
-						<span class="tech-badge">Tailwind CSS 4.0</span>
-						<span class="tech-badge">Alpine.js</span>
-						<span class="tech-badge">Plyr</span>
-						<span class="tech-badge">HLS.js</span>
-						<span class="tech-badge">Font Awesome</span>
-					</div>
-
-					<h3 class="fragment fade-in" style="color: #2C3E50; margin: 1em 0 0.5em; font-size: 0.9em;">Infrastructure</h3>
-					<div class="fragment fade-in">
-						<span class="tech-badge">Docker Compose</span>
-						<span class="tech-badge">Nginx</span>
-						<span class="tech-badge">FFmpeg</span>
-						<span class="tech-badge">Pure-FTPd</span>
-						<span class="tech-badge">phpMyAdmin</span>
-					</div>
-				</div>
-			</section>
-
-			<!-- SLIDE 5: DÉMO -->
-			<section>
-				<h2 class="section-title">Démonstration Live</h2>
-				<p style="color: #666; margin-bottom: 0.5em;">
-					Application en action sur <code>localhost:8080</code>
-				</p>
-				<div class="demo-container">
-					<iframe src="http://localhost:8080" title="BTSPlay Demo"></iframe>
-				</div>
-				<p style="font-size: 0.6em; color: #999; margin-top: 0.5em;">
-					💡 Pour lancer : <code>docker compose up</code>
-				</p>
-			</section>
-
-			<!-- SLIDE 6: ARCHITECTURE - Vue d'ensemble -->
-			<section>
-				<section>
-					<h2 class="section-title">Architecture Système</h2>
-					<div style="text-align: left; max-width: 850px; margin: 0 auto;">
-						<div class="feature-item" style="margin: 0.8em 0;">
-							<h3>Services Docker</h3>
-							<ul style="font-size: 0.6em; margin-top: 0.3em; margin-left: 1.5em;">
-								<li><strong>btsplay-laravel</strong> - Application PHP-FPM</li>
-								<li><strong>btsplay-queue</strong> - Worker de transcodage</li>
-								<li><strong>btsplay-nginx</strong> - Serveur web (8080)</li>
-								<li><strong>btsplay-mysql</strong> - Base de données</li>
-								<li><strong>btsplay-ftp-pad</strong> - FTP pour MXF</li>
-								<li><strong>btsplay-ftp-arch</strong> - FTP pour MP4</li>
-							</ul>
-						</div>
-						<p style="font-size: 0.6em; color: #999; margin-top: 1em; text-align: center;">
-							⬇️ Naviguer vers le bas pour les détails de chaque service
+					<p class="fragment fade-in" style="color: #666; margin-bottom: 1em;">
+						5 étudiants de <strong>BUT Informatique 3 - Parcours D (IAMSI)</strong>
+					</p>
+					<ul class="team-list fragment fade-in">
+						<li><strong>BAROS Arthur</strong> - Proxy PO</li>
+						<li><strong>HAMCHOUCHE Kamelia</strong> - Scrum Master</li>
+						<li><strong>LOUSTAU-CAZAUX David</strong> - Réf. Technique</li>
+						<li><strong>LUCAS Liam</strong> - Réf. Qualité</li>
+						<li><strong>NUNEZ RODRIGUEZ Laura Elena</strong> - Réf. Frontend</li>
+					</ul>
+					<div class="highlight-box fragment fade-in" style="margin-top: 1.5em;">
+						<p>
+							<strong>IUT de Bayonne</strong> - SAÉ S.6.01 - 2025-2026<br/>
+							Commanditaire : M. MARTIN Philippe (BTS Audiovisuel Lycée René Cassin)<br/>
+							<a href="https://github.com/brs64/Media-Asset-Manager" style="color: white; text-decoration: underline;" target="_blank">
+								github.com/brs64/Media-Asset-Manager
+							</a>
 						</p>
 					</div>
-				</section>
-
-				<!-- Architecture: Laravel -->
-				<section>
-					<h3 style="color: #2C3E50; border-bottom: 2px solid #E6A23C; padding-bottom: 0.3em; display: inline-block;">btsplay-laravel</h3>
-					<div style="text-align: left; max-width: 800px; margin: 1em auto;">
-						<div class="feature-item">
-							<p style="font-size: 0.7em; line-height: 1.6;">
-								<strong>Rôle :</strong> Cœur de l'application web<br/>
-								<strong>Technologies :</strong> Laravel 12, PHP 8.2+, Eloquent ORM<br/>
-								<strong>Responsabilités :</strong>
-							</p>
-							<ul style="font-size: 0.65em; margin-left: 1.5em; margin-top: 0.5em;">
-								<li>Gestion des routes et contrôleurs</li>
-								<li>Authentification et autorisation (Laravel Breeze + Spatie)</li>
-								<li>Interaction avec la base de données MySQL</li>
-								<li>Communication avec les serveurs FTP</li>
-								<li>Génération de miniatures et streaming HLS</li>
-							</ul>
-						</div>
-					</div>
-				</section>
-
-				<!-- Architecture: Queue -->
-				<section>
-					<h3 style="color: #2C3E50; border-bottom: 2px solid #E6A23C; padding-bottom: 0.3em; display: inline-block;">btsplay-queue</h3>
-					<div style="text-align: left; max-width: 800px; margin: 1em auto;">
-						<div class="feature-item">
-							<p style="font-size: 0.7em; line-height: 1.6;">
-								<strong>Rôle :</strong> Worker pour jobs asynchrones<br/>
-								<strong>Technologies :</strong> Laravel Queue (database driver)<br/>
-								<strong>Responsabilités :</strong>
-							</p>
-							<ul style="font-size: 0.65em; margin-left: 1.5em; margin-top: 0.5em;">
-								<li>Traitement des jobs de transcodage FFAStrans</li>
-								<li>Surveillance de l'état des conversions vidéo</li>
-								<li>Gestion des transferts entre NAS</li>
-								<li>Exécution de tâches longues en arrière-plan</li>
-								<li>Réconciliation automatique des contenus</li>
-							</ul>
-						</div>
-					</div>
-				</section>
-
-				<!-- Architecture: Nginx -->
-				<section>
-					<h3 style="color: #2C3E50; border-bottom: 2px solid #E6A23C; padding-bottom: 0.3em; display: inline-block;">btsplay-nginx</h3>
-					<div style="text-align: left; max-width: 800px; margin: 1em auto;">
-						<div class="feature-item">
-							<p style="font-size: 0.7em; line-height: 1.6;">
-								<strong>Rôle :</strong> Serveur web reverse proxy<br/>
-								<strong>Technologies :</strong> Nginx (Alpine)<br/>
-								<strong>Responsabilités :</strong>
-							</p>
-							<ul style="font-size: 0.65em; margin-left: 1.5em; margin-top: 0.5em;">
-								<li>Exposition de l'application sur le port 8080</li>
-								<li>Proxy des requêtes vers PHP-FPM</li>
-								<li>Gestion des fichiers statiques (CSS, JS, images)</li>
-								<li>Optimisation des performances avec cache</li>
-								<li>Configuration SSL/TLS pour production</li>
-							</ul>
-						</div>
-					</div>
-				</section>
-
-				<!-- Architecture: MySQL -->
-				<section>
-					<h3 style="color: #2C3E50; border-bottom: 2px solid #E6A23C; padding-bottom: 0.3em; display: inline-block;">btsplay-mysql</h3>
-					<div style="text-align: left; max-width: 800px; margin: 1em auto;">
-						<div class="feature-item">
-							<p style="font-size: 0.7em; line-height: 1.6;">
-								<strong>Rôle :</strong> Base de données relationnelle<br/>
-								<strong>Technologies :</strong> MySQL 5.7<br/>
-								<strong>Contenu :</strong>
-							</p>
-							<ul style="font-size: 0.65em; margin-left: 1.5em; margin-top: 0.5em;">
-								<li>Table <code>medias</code> : métadonnées des vidéos</li>
-								<li>Tables <code>users</code>, <code>eleves</code>, <code>professeurs</code></li>
-								<li>Tables <code>roles</code> et <code>permissions</code> (Spatie)</li>
-								<li>Table <code>jobs</code> : queue de transcodage</li>
-								<li>Migrations Laravel pour versioning du schéma</li>
-							</ul>
-						</div>
-					</div>
-				</section>
-
-				<!-- Architecture: FTP PAD -->
-				<section>
-					<h3 style="color: #2C3E50; border-bottom: 2px solid #E6A23C; padding-bottom: 0.3em; display: inline-block;">btsplay-ftp-pad</h3>
-					<div style="text-align: left; max-width: 800px; margin: 1em auto;">
-						<div class="feature-item">
-							<p style="font-size: 0.7em; line-height: 1.6;">
-								<strong>Rôle :</strong> Serveur FTP pour fichiers MXF<br/>
-								<strong>Technologies :</strong> Pure-FTPd<br/>
-								<strong>Caractéristiques :</strong>
-							</p>
-							<ul style="font-size: 0.65em; margin-left: 1.5em; margin-top: 0.5em;">
-								<li>Port : 21001</li>
-								<li>Stockage : fichiers MXF broadcast (qualité maximale)</li>
-								<li>Utilisé par les équipes de production</li>
-								<li>Format professionnel pour montage vidéo</li>
-								<li>Accès sécurisé avec authentification</li>
-							</ul>
-						</div>
-					</div>
-				</section>
-
-				<!-- Architecture: FTP ARCH -->
-				<section>
-					<h3 style="color: #2C3E50; border-bottom: 2px solid #E6A23C; padding-bottom: 0.3em; display: inline-block;">btsplay-ftp-arch</h3>
-					<div style="text-align: left; max-width: 800px; margin: 1em auto;">
-						<div class="feature-item">
-							<p style="font-size: 0.7em; line-height: 1.6;">
-								<strong>Rôle :</strong> Serveur FTP pour fichiers MP4<br/>
-								<strong>Technologies :</strong> Pure-FTPd<br/>
-								<strong>Caractéristiques :</strong>
-							</p>
-							<ul style="font-size: 0.65em; margin-left: 1.5em; margin-top: 0.5em;">
-								<li>Port : 21002</li>
-								<li>Stockage : fichiers MP4 H.264 25Mbps</li>
-								<li>Format optimisé pour consultation web</li>
-								<li>Utilisé pour streaming HLS</li>
-								<li>Accessible aux étudiants et professeurs</li>
-							</ul>
-						</div>
-					</div>
-				</section>
-
-				<!-- Architecture: Workflow -->
-				<section>
-					<h3 style="color: #2C3E50; border-bottom: 2px solid #E6A23C; padding-bottom: 0.3em; display: inline-block;">Workflow de Transcodage</h3>
-					<div style="text-align: left; max-width: 800px; margin: 1em auto;">
-						<div class="feature-item">
-							<p style="font-size: 0.7em; line-height: 1.6; margin-bottom: 0.8em;">
-								<strong>Processus automatique :</strong>
-							</p>
-							<ol style="font-size: 0.65em; margin-left: 1.5em; line-height: 1.8;">
-								<li>L'utilisateur demande une vidéo manquante sur un NAS</li>
-								<li>Laravel crée un job dans la queue</li>
-								<li>Le worker <code>btsplay-queue</code> récupère le job</li>
-								<li>Appel API vers FFAStrans pour transcodage</li>
-								<li>Surveillance de l'état du job (polling)</li>
-								<li>Récupération du fichier converti</li>
-								<li>Mise à jour de la base de données</li>
-								<li>Notification à l'utilisateur</li>
-							</ol>
-						</div>
-					</div>
-				</section>
+				</div>
 			</section>
 
-			<!-- SLIDE 7: CAS D'USAGE -->
+			<!-- FONCTIONNALITÉS -->
+			<section>
+				<h2 class="section-title">Fonctionnalités Clés</h2>
+				<div class="feature-grid">
+					<div class="feature-item fragment fade-up">
+						<h3>Découverte & Indexation</h3>
+						<p>Indexation automatique des vidéos sur les deux NAS avec réconciliation intelligente</p>
+					</div>
+					<div class="feature-item fragment fade-up">
+						<h3>Lecture Vidéo Web</h3>
+						<p>Streaming HLS adaptatif avec génération de miniatures</p>
+					</div>
+					<div class="feature-item fragment fade-up">
+						<h3>Transcodage Professionnel</h3>
+						<p>Intégration FFAStrans pour conversion MXF ↔ MP4</p>
+					</div>
+					<div class="feature-item fragment fade-up">
+						<h3>Gestion des Utilisateurs</h3>
+						<p>Authentification et permissions (Étudiants, Professeurs, Admins)</p>
+					</div>
+					<div class="feature-item fragment fade-up">
+						<h3>Recherche Avancée</h3>
+						<p>Moteur de recherche avec autocomplétion et filtres</p>
+					</div>
+					<div class="feature-item fragment fade-up">
+						<h3>Panel Administrateur</h3>
+						<p>Synchronisation, réconciliation, logs, backups et import CSV d'élèves</p>
+					</div>
+				</div>
+			</section>
+
+			<!-- CAS D'USAGE -->
 			<section>
 				<section>
 					<h2 class="section-title">Cas d'Usage Concrets</h2>
-					<div style="text-align: left; max-width: 850px; margin: 1em auto;">
+					<div style="display: grid; grid-template-columns: repeat(3, 1fr); gap: 1em; margin-top: 1em;">
 						<div class="feature-item fragment fade-in">
 							<h3>Étudiant en production</h3>
-							<p style="font-size: 0.7em; line-height: 1.6;">
-								Un étudiant termine son tournage. Il dépose le fichier MXF sur le NAS. BTSPlay l'indexe automatiquement, génère une miniature, et le transcrit en MP4 pour consultation web. L'étudiant peut ensuite partager le lien à ses professeurs.
-							</p>
+							<p>Dépose un MXF sur le NAS. BTSPlay indexe, génère une miniature et transcrit en MP4. Partage le lien aux professeurs.</p>
 						</div>
-						<div class="feature-item fragment fade-in" style="margin-top: 1em;">
+						<div class="feature-item fragment fade-in">
 							<h3>Professeur en évaluation</h3>
-							<p style="font-size: 0.7em; line-height: 1.6;">
-								Un professeur recherche tous les projets d'une promotion. Il utilise les filtres de recherche, visionne directement les vidéos dans le navigateur, et laisse des commentaires sur les métadonnées.
-							</p>
+							<p>Recherche les projets d'une promotion via filtres, visionne dans le navigateur et commente les métadonnées.</p>
 						</div>
-						<div class="feature-item fragment fade-in" style="margin-top: 1em;">
-							<h3>Administrateur en maintenance</h3>
-							<p style="font-size: 0.7em; line-height: 1.6;">
-								L'admin constate qu'un NAS manque de fichiers. Il lance une réconciliation qui identifie les vidéos manquantes et déclenche automatiquement les transcodages nécessaires.
-							</p>
+						<div class="feature-item fragment fade-in">
+							<h3>Admin en maintenance</h3>
+							<p>Lance une réconciliation pour identifier les vidéos manquantes et déclencher les transcodages nécessaires.</p>
 						</div>
 					</div>
 					<p style="font-size: 0.6em; color: #999; margin-top: 1em;">
@@ -566,34 +314,237 @@
 				</section>
 			</section>
 
-			<!-- SLIDE 8: DÉFIS TECHNIQUES -->
+			<!-- SLIDE 5: DÉMO -->
+			<section>
+				<h2 class="section-title">Démonstration Live</h2>
+				<p style="color: #666; margin-bottom: 0.5em;">
+					Application en action sur <code>localhost:8080</code>
+				</p>
+				<div class="demo-container">
+					<iframe src="http://localhost:8080" title="BTSPlay Demo"></iframe>
+				</div>
+			</section>
+
+			<!-- ======================== -->
+			<!-- PARTIE 2: CONTRIBUTIVE   -->
+			<!-- ======================== -->
+			<section class="intro-bg">
+				<h2 style="color: #E6A23C;">Partie Contributive</h2>
+				<p style="color: rgba(255,255,255,0.9); font-size: 0.85em;">Livraison effective de l'application</p>
+			</section>
+
+			<!-- STACK TECHNIQUE + WORKFLOW -->
+			<section>
+				<section>
+					<h2 class="section-title">Stack Technique</h2>
+					<div style="display: grid; grid-template-columns: repeat(3, 1fr); gap: 1.5em; margin-top: 1em; text-align: center;">
+						<div class="fragment fade-in">
+							<h3 style="color: #2C3E50; margin-bottom: 0.5em; font-size: 0.9em;">Backend</h3>
+							<span class="tech-badge">Laravel 12</span>
+							<span class="tech-badge">PHP 8.2+</span>
+							<span class="tech-badge">MySQL 5.7</span>
+							<span class="tech-badge">Laravel Breeze</span>
+							<span class="tech-badge">FFAStrans API</span>
+							<span class="tech-badge">Spatie Permissions</span>
+						</div>
+						<div class="fragment fade-in">
+							<h3 style="color: #2C3E50; margin-bottom: 0.5em; font-size: 0.9em;">Frontend</h3>
+							<span class="tech-badge">Vite</span>
+							<span class="tech-badge">Tailwind CSS 4.0</span>
+							<span class="tech-badge">Alpine.js</span>
+							<span class="tech-badge">Plyr</span>
+							<span class="tech-badge">HLS.js</span>
+							<span class="tech-badge">Font Awesome</span>
+						</div>
+						<div class="fragment fade-in">
+							<h3 style="color: #2C3E50; margin-bottom: 0.5em; font-size: 0.9em;">Infrastructure</h3>
+							<span class="tech-badge">Docker Compose</span>
+							<span class="tech-badge">Nginx</span>
+							<span class="tech-badge">FFmpeg</span>
+							<span class="tech-badge">Pure-FTPd</span>
+							<span class="tech-badge">Tailscale VPN</span>
+							<span class="tech-badge">phpMyAdmin</span>
+						</div>
+					</div>
+					<p style="font-size: 0.6em; color: #999; margin-top: 1em;">
+						⬇️ Workflow de transcodage
+					</p>
+				</section>
+
+				<section>
+					<h3 style="color: #2C3E50; border-bottom: 2px solid #E6A23C; padding-bottom: 0.3em; display: inline-block;">Workflow de Transcodage</h3>
+					<div style="text-align: left; max-width: 850px; margin: 1em auto;">
+						<div class="feature-item">
+							<p style="font-size: 0.7em; line-height: 1.6; margin-bottom: 0.8em;">
+								<strong>Processus automatique :</strong>
+							</p>
+							<ol style="font-size: 0.65em; margin-left: 1.5em; line-height: 1.8;">
+								<li>Post-Production livre MXF + MP4 au Contrôle Qualité</li>
+								<li>Fichiers conformes transférés sur NAS PAD et NAS Archivage</li>
+								<li>BTSPlay détecte les nouveaux fichiers, crée les assets en BDD</li>
+								<li>Réconciliation : association MXF ↔ MP4 par nom de fichier</li>
+								<li>Si fichier manquant : job de transcodage via API FFAStrans (port 65445)</li>
+								<li>Surveillance du job (polling) et mise à jour BDD</li>
+							</ol>
+						</div>
+					</div>
+				</section>
+			</section>
+
+			<!-- SLIDE 6: ARCHITECTURE - Vue d'ensemble -->
+			<section>
+				<section>
+					<h2 class="section-title">Architecture Système</h2>
+					<div style="display: grid; grid-template-columns: 1fr 1fr; gap: 1.5em; margin-top: 1em; text-align: left;">
+						<div class="feature-item">
+							<h3>Production (5 services)</h3>
+							<ul style="font-size: 0.6em; margin-left: 1.5em; margin-top: 0.3em;">
+								<li><strong>btsplay-nginx</strong> - Reverse proxy (8080)</li>
+								<li><strong>btsplay-laravel</strong> - Application PHP-FPM</li>
+								<li><strong>btsplay-queue</strong> - Worker transcodage</li>
+								<li><strong>btsplay-mysql</strong> - Base de données</li>
+								<li><strong>btsplay-phpmyadmin</strong> - Admin DB (8001)</li>
+								<li>Image <code>btsplay-app:prod</code> multi-stage</li>
+								<li>Accès direct aux vrais NAS via SMBv1</li>
+							</ul>
+						</div>
+						<div class="feature-item">
+							<h3>Dev ajoute (+2 services)</h3>
+							<ul style="font-size: 0.6em; margin-left: 1.5em; margin-top: 0.3em;">
+								<li><strong>btsplay-ftp-pad</strong> - Simule NAS PAD (21001)</li>
+								<li><strong>btsplay-ftp-arch</strong> - Simule NAS Archivage (21002)</li>
+								<li>Code source monté en volume (hot reload)</li>
+								<li>Dockerfile.dev au lieu de multi-stage</li>
+								<li>Volumes supplémentaires : ftp-pad-data, ftp-arch-data</li>
+							</ul>
+						</div>
+					</div>
+					<p style="font-size: 0.6em; color: #999; margin-top: 1em; text-align: center;">
+						⬇️ Naviguer vers le bas pour les détails de chaque service
+					</p>
+				</section>
+
+				<!-- Architecture: Nginx -->
+				<section>
+					<h3 style="color: #2C3E50; border-bottom: 2px solid #E6A23C; padding-bottom: 0.3em; display: inline-block;">btsplay-nginx</h3>
+					<div style="text-align: left; max-width: 800px; margin: 1em auto;">
+						<div class="feature-item">
+							<p style="font-size: 0.7em; line-height: 1.6;">
+								<strong>Rôle :</strong> Serveur web reverse proxy<br/>
+								<strong>Technologies :</strong> Nginx (Alpine)<br/>
+								<strong>Responsabilités :</strong>
+							</p>
+							<ul style="font-size: 0.65em; margin-left: 1.5em; margin-top: 0.5em;">
+								<li>Exposition de l'application sur le port 8080</li>
+								<li>Proxy des requêtes vers PHP-FPM</li>
+								<li>Gestion des fichiers statiques (CSS, JS, images)</li>
+								<li>Optimisation des performances avec cache</li>
+								<li>Configuration SSL/TLS pour production</li>
+							</ul>
+						</div>
+					</div>
+				</section>
+
+				<!-- Architecture: Laravel + Queue -->
+				<section>
+					<h3 style="color: #2C3E50; border-bottom: 2px solid #E6A23C; padding-bottom: 0.3em; display: inline-block;">btsplay-laravel & btsplay-queue</h3>
+					<div style="display: grid; grid-template-columns: 1fr 1fr; gap: 1.5em; margin-top: 1em; text-align: left;">
+						<div class="feature-item">
+							<h3>btsplay-laravel</h3>
+							<p style="font-size: 0.65em; color: #666; margin-bottom: 0.3em;">Coeur de l'application (PHP-FPM)</p>
+							<ul style="font-size: 0.6em; margin-left: 1.5em; margin-top: 0.3em;">
+								<li>Laravel 12, PHP 8.2+, Eloquent ORM</li>
+								<li>Routes, contrôleurs, auth (Breeze + Spatie)</li>
+								<li>Communication FTP avec les NAS</li>
+								<li>Génération miniatures et streaming HLS</li>
+							</ul>
+						</div>
+						<div class="feature-item">
+							<h3>btsplay-queue</h3>
+							<p style="font-size: 0.65em; color: #666; margin-bottom: 0.3em;">Worker pour jobs asynchrones</p>
+							<ul style="font-size: 0.6em; margin-left: 1.5em; margin-top: 0.3em;">
+								<li>Laravel Queue (database driver)</li>
+								<li>Jobs de transcodage FFAStrans</li>
+								<li>Surveillance des conversions vidéo</li>
+								<li>Réconciliation automatique des contenus</li>
+							</ul>
+						</div>
+					</div>
+				</section>
+
+				<!-- Architecture: MySQL -->
+				<section>
+					<h3 style="color: #2C3E50; border-bottom: 2px solid #E6A23C; padding-bottom: 0.3em; display: inline-block;">btsplay-mysql</h3>
+					<div style="text-align: left; max-width: 800px; margin: 1em auto;">
+						<div class="feature-item">
+							<p style="font-size: 0.7em; line-height: 1.6;">
+								<strong>Rôle :</strong> Base de données relationnelle<br/>
+								<strong>Technologies :</strong> MySQL 5.7<br/>
+								<strong>Contenu :</strong>
+							</p>
+							<ul style="font-size: 0.65em; margin-left: 1.5em; margin-top: 0.5em;">
+								<li>Table <code>medias</code> : métadonnées des vidéos</li>
+								<li>Tables <code>users</code>, <code>eleves</code>, <code>professeurs</code></li>
+								<li>Tables <code>roles</code> et <code>permissions</code> (Spatie)</li>
+								<li>Table <code>jobs</code> : queue de transcodage</li>
+								<li>Migrations Laravel pour versioning du schéma</li>
+							</ul>
+						</div>
+					</div>
+				</section>
+
+				<!-- Architecture: Serveurs FTP (NAS) -->
+				<section>
+					<h3 style="color: #2C3E50; border-bottom: 2px solid #E6A23C; padding-bottom: 0.3em; display: inline-block;">Serveurs FTP (Accès NAS)</h3>
+					<div style="display: grid; grid-template-columns: 1fr 1fr; gap: 1.5em; margin-top: 1em; text-align: left;">
+						<div class="feature-item">
+							<h3>btsplay-ftp-pad (NAS PAD)</h3>
+							<ul style="font-size: 0.65em; margin-left: 1.5em; margin-top: 0.5em;">
+								<li>Port : 21001</li>
+								<li>Fichiers MXF XDCAM HD 50Mb/s</li>
+								<li>Format professionnel pour montage</li>
+								<li>Arborescence : année\projet\répertoire\fichiers</li>
+							</ul>
+						</div>
+						<div class="feature-item">
+							<h3>btsplay-ftp-arch (NAS Archivage)</h3>
+							<ul style="font-size: 0.65em; margin-left: 1.5em; margin-top: 0.5em;">
+								<li>Port : 21002</li>
+								<li>Fichiers MP4 H.264 25Mb/s</li>
+								<li>Archivage et consultation web</li>
+								<li>Source pour streaming HLS</li>
+							</ul>
+						</div>
+					</div>
+					<div class="highlight-box" style="margin-top: 1em;">
+						<p style="font-size: 0.8em;">
+							<strong>Dev :</strong> Pure-FTPd simule les NAS | <strong>Prod :</strong> Accès direct via SMBv1 + FTP
+						</p>
+					</div>
+				</section>
+
+			</section>
+
+			<!-- SLIDE 7: DÉFIS TECHNIQUES -->
 			<section>
 				<section>
 					<h2 class="section-title">Défis Techniques Relevés</h2>
-					<div style="text-align: left; max-width: 850px; margin: 1em auto;">
+					<div class="feature-grid">
 						<div class="feature-item fragment fade-right">
 							<h3>Synchronisation bi-directionnelle</h3>
-							<p style="font-size: 0.7em;">
-								Réconcilier deux NAS avec des fichiers dans différents formats et éviter les doublons
-							</p>
+							<p>Réconcilier deux NAS avec des fichiers dans différents formats et éviter les doublons</p>
 						</div>
-						<div class="feature-item fragment fade-right" style="margin-top: 0.8em;">
+						<div class="feature-item fragment fade-right">
 							<h3>Streaming vidéo performant</h3>
-							<p style="font-size: 0.7em;">
-								Segmentation HLS à la volée pour des fichiers de plusieurs Go sans saturer le serveur
-							</p>
+							<p>Segmentation HLS à la volée pour des fichiers de plusieurs Go sans saturer le serveur</p>
 						</div>
-						<div class="feature-item fragment fade-right" style="margin-top: 0.8em;">
+						<div class="feature-item fragment fade-right">
 							<h3>Gestion des jobs asynchrones</h3>
-							<p style="font-size: 0.7em;">
-								Transcodage de vidéos longues sans bloquer l'interface, avec gestion des échecs et reprises
-							</p>
+							<p>Transcodage de vidéos longues sans bloquer l'interface, avec gestion des échecs et reprises</p>
 						</div>
-						<div class="feature-item fragment fade-right" style="margin-top: 0.8em;">
+						<div class="feature-item fragment fade-right">
 							<h3>Permissions granulaires</h3>
-							<p style="font-size: 0.7em;">
-								Système de rôles complexe permettant un contrôle fin des accès selon le profil utilisateur
-							</p>
+							<p>Système de rôles complexe permettant un contrôle fin des accès selon le profil utilisateur</p>
 						</div>
 					</div>
 					<p style="font-size: 0.6em; color: #999; margin-top: 1em;">
@@ -633,34 +584,83 @@
 				</section>
 			</section>
 
-			<!-- SLIDE 9: L'ÉQUIPE -->
+			<!-- SLIDE 8: TESTS -->
 			<section>
-				<h2 class="section-title">L'Équipe</h2>
-				<div style="margin-top: 1em;">
-					<p class="fragment fade-in" style="color: #666; margin-bottom: 1em;">
-						5 étudiants de <strong>BUT Informatique 3</strong>
-					</p>
-					<ul class="team-list fragment fade-in">
-						<li><strong>BAROS Arthur</strong></li>
-						<li><strong>HAMCHOUCHE Kamelia</strong></li>
-						<li><strong>LOUSTAU-CAZAUX David</strong></li>
-						<li><strong>LUCAS Liam</strong></li>
-						<li><strong>NUNEZ RODRIGUEZ Laura Elena</strong></li>
-					</ul>
-					<div class="highlight-box fragment fade-in" style="margin-top: 1.5em;">
-						<p>
-							<strong>IUT de Bayonne</strong> - Projet SAE 2025<br/>
-							<a href="https://github.com/brs64/Media-Asset-Manager" style="color: white; text-decoration: underline;" target="_blank">
-								github.com/brs64/Media-Asset-Manager
-							</a>
-						</p>
+				<h2 class="section-title">Tests PHPUnit</h2>
+				<div style="text-align: left; max-width: 850px; margin: 1em auto;">
+					<div class="highlight-box" style="background: #2C3E50;">
+						<p style="font-size: 0.85em;"><strong>167 tests</strong> dans 16 fichiers (Feature + Unit) - BDD SQLite in-memory</p>
+					</div>
+					<div class="feature-grid" style="margin-top: 1em;">
+						<div class="feature-item fragment fade-in">
+							<h3>Feature Tests (14 fichiers)</h3>
+							<ul style="font-size: 0.6em; margin-left: 1.5em; margin-top: 0.3em;">
+								<li>AdminController (25 tests)</li>
+								<li>TransfertController (16 tests)</li>
+								<li>SearchController (15 tests)</li>
+								<li>MediaThumbnailService (15 tests)</li>
+								<li>StreamController (11 tests)</li>
+								<li>MediaController, FileExplorer, Permissions, Auth...</li>
+							</ul>
+						</div>
+						<div class="feature-item fragment fade-in">
+							<h3>Unit Tests (2 fichiers)</h3>
+							<ul style="font-size: 0.6em; margin-left: 1.5em; margin-top: 0.3em;">
+								<li>MediaService (32 tests)</li>
+								<li>FfastransService (20 tests)</li>
+							</ul>
+						</div>
 					</div>
 				</div>
 			</section>
 
-			<!-- SLIDE 10: POINTS FORTS -->
+			<!-- CAHIER DE RECETTES -->
 			<section>
-				<h2 class="section-title">Points Forts</h2>
+				<h2 class="section-title">Bilan Cahier de Recettes</h2>
+				<div style="display: grid; grid-template-columns: repeat(3, 1fr); gap: 1em; margin-top: 1em; text-align: left;">
+					<div class="feature-item fragment fade-in" style="border-left-color: #27ae60;">
+						<h3 style="color: #27ae60;">15 US OK</h3>
+						<ul style="font-size: 0.65em; margin-left: 1.5em; margin-top: 0.5em;">
+							<li>Connexion / Accès non autorisé</li>
+							<li>Consultation vidéos (Étudiant/Prof)</li>
+							<li>Modification métadonnées</li>
+							<li>Indexation, Recherche, Navigation</li>
+							<li>Réconciliation, Logs, Backup</li>
+							<li>Gestion serveurs, Création champs</li>
+						</ul>
+					</div>
+					<div class="feature-item fragment fade-in" style="border-left-color: #e74c3c;">
+						<h3 style="color: #e74c3c;">3 US KO / NOK</h3>
+						<ul style="font-size: 0.65em; margin-left: 1.5em; margin-top: 0.5em;">
+							<li>Déplacement vidéo vers NAS diffusion (S-31)</li>
+							<li>Extraction métadonnées techniques FFAStrans (S-10)</li>
+							<li>Suppression vidéo (Prof/Admin)</li>
+						</ul>
+					</div>
+					<div class="feature-item fragment fade-in" style="border-left-color: #E6A23C;">
+						<h3 style="color: #E6A23C;">5 US à améliorer</h3>
+						<ul style="font-size: 0.65em; margin-left: 1.5em; margin-top: 0.5em;">
+							<li>Retour visuel réconciliation</li>
+							<li>Priorisation jobs FFAStrans</li>
+							<li>Cache arborescence NAS</li>
+							<li>Miniature plus pertinente</li>
+							<li>Filtrage secondaire recherche</li>
+						</ul>
+					</div>
+				</div>
+			</section>
+
+			<!-- ======================== -->
+			<!-- PARTIE 3: CONCLUSIVE     -->
+			<!-- ======================== -->
+			<section class="intro-bg">
+				<h2 style="color: #E6A23C;">Partie Conclusive</h2>
+				<p style="color: rgba(255,255,255,0.9); font-size: 0.85em;">Synthèse et positionnement</p>
+			</section>
+
+			<!-- SYNTHÈSE -->
+			<section>
+				<h2 class="section-title">Synthèse</h2>
 				<div class="feature-grid">
 					<div class="feature-item fragment fade-in">
 						<h3>Performance</h3>
@@ -676,127 +676,85 @@
 					</div>
 					<div class="feature-item fragment fade-in">
 						<h3>Documentation</h3>
-						<p>Documentation intégrée complète pour tous les utilisateurs</p>
+						<p>Doxygen technique, guide utilisateur, README d'installation</p>
 					</div>
 				</div>
 				<div class="highlight-box fragment fade-in" style="margin-top: 1em;">
 					<p>
-						Solution <strong>production-ready</strong> pour les besoins réels d'une école audiovisuelle
+						Solution <strong>production-ready</strong> déployée sur SERV-BTSPLAY-01 pour le quotidien du BTS Audiovisuel
 					</p>
 				</div>
 			</section>
 
-			<!-- SLIDE 11: PERSPECTIVES -->
+			<!-- PERSPECTIVES -->
 			<section>
-				<section>
-					<h2 class="section-title">Perspectives d'Évolution</h2>
-					<div style="text-align: left; max-width: 850px; margin: 1em auto;">
-						<div class="feature-item fragment fade-left">
-							<h3>Court terme</h3>
-							<ul style="font-size: 0.65em; margin-left: 1.5em; margin-top: 0.5em;">
-								<li>Notifications push pour les transcodages terminés</li>
-								<li>Système de commentaires sur les vidéos</li>
-								<li>Export de playlists et collections</li>
-								<li>API REST pour intégrations tierces</li>
-							</ul>
-						</div>
-						<div class="feature-item fragment fade-left" style="margin-top: 1em;">
-							<h3>Moyen terme</h3>
-							<ul style="font-size: 0.65em; margin-left: 1.5em; margin-top: 0.5em;">
-								<li>Analyse automatique des métadonnées vidéo (IA)</li>
-								<li>Système de watermarking pour protéger les contenus</li>
-								<li>Application mobile native (iOS/Android)</li>
-								<li>Intégration avec outils de montage (Premiere, DaVinci)</li>
-							</ul>
-						</div>
-						<div class="feature-item fragment fade-left" style="margin-top: 1em;">
-							<h3>Long terme</h3>
-							<ul style="font-size: 0.65em; margin-left: 1.5em; margin-top: 0.5em;">
-								<li>Plateforme multi-école (SaaS)</li>
-								<li>Machine learning pour recommandations</li>
-								<li>Édition vidéo collaborative en ligne</li>
-								<li>Support de formats 4K, 8K et VR</li>
-							</ul>
-						</div>
+				<h2 class="section-title">Perspectives d'Évolution</h2>
+				<div style="display: grid; grid-template-columns: repeat(3, 1fr); gap: 1em; margin-top: 1em; text-align: left;">
+					<div class="feature-item fragment fade-left">
+						<h3>Fonctionnalités manquantes</h3>
+						<ul style="font-size: 0.65em; margin-left: 1.5em; margin-top: 0.5em;">
+							<li>Déplacement vidéo vers NAS diffusion (S-31)</li>
+							<li>Suppression de vidéos (Professeur/Admin)</li>
+							<li>Extraction métadonnées techniques via FFAStrans (S-10)</li>
+						</ul>
 					</div>
-					<p style="font-size: 0.6em; color: #999; margin-top: 1em;">
-						⬇️ Aspects techniques à améliorer
-					</p>
-				</section>
-
-				<!-- Sous-section: Améliorations techniques -->
-				<section>
-					<h3 style="color: #2C3E50; border-bottom: 2px solid #E6A23C; padding-bottom: 0.3em; display: inline-block;">Améliorations Techniques</h3>
-					<div style="text-align: left; max-width: 800px; margin: 1em auto;">
-						<div class="feature-item fragment fade-in">
-							<p style="font-size: 0.7em; line-height: 1.6;"><strong>Scalabilité :</strong></p>
-							<ul style="font-size: 0.65em; margin-left: 1.5em; margin-top: 0.5em;">
-								<li>Déploiement Kubernetes pour haute disponibilité</li>
-								<li>Load balancing avec plusieurs workers de transcodage</li>
-								<li>Cache distribué Redis pour les sessions</li>
-								<li>CDN pour la diffusion des vidéos à grande échelle</li>
-							</ul>
-						</div>
-						<div class="feature-item fragment fade-in" style="margin-top: 0.8em;">
-							<p style="font-size: 0.7em; line-height: 1.6;"><strong>Monitoring :</strong></p>
-							<ul style="font-size: 0.65em; margin-left: 1.5em; margin-top: 0.5em;">
-								<li>Intégration Prometheus + Grafana pour métriques</li>
-								<li>Sentry pour tracking des erreurs</li>
-								<li>Logs centralisés avec Elastic Stack</li>
-								<li>Alertes automatiques en cas de défaillance</li>
-							</ul>
-						</div>
-						<div class="feature-item fragment fade-in" style="margin-top: 0.8em;">
-							<p style="font-size: 0.7em; line-height: 1.6;"><strong>Sécurité renforcée :</strong></p>
-							<ul style="font-size: 0.65em; margin-left: 1.5em; margin-top: 0.5em;">
-								<li>Authentification 2FA pour les admins</li>
-								<li>Chiffrement des vidéos sensibles au repos</li>
-								<li>Audit trail complet des actions utilisateurs</li>
-								<li>Conformité RGPD avec gestion des consentements</li>
-							</ul>
-						</div>
+					<div class="feature-item fragment fade-left">
+						<h3>Améliorations identifiées</h3>
+						<ul style="font-size: 0.65em; margin-left: 1.5em; margin-top: 0.5em;">
+							<li>Réconciliation NAS : retour visuel (S-34)</li>
+							<li>Priorisation des jobs FFAStrans (S-36)</li>
+							<li>Cache arborescence NAS (S-67)</li>
+							<li>Choix miniature plus pertinent (S-77)</li>
+							<li>Filtrage secondaire recherche (S-74)</li>
+						</ul>
 					</div>
-				</section>
-
-				<!-- Sous-section: Roadmap -->
-				<section>
-					<h3 style="color: #2C3E50; border-bottom: 2px solid #E6A23C; padding-bottom: 0.3em; display: inline-block;">Roadmap 2025-2026</h3>
-					<div style="text-align: left; max-width: 800px; margin: 1em auto;">
-						<div style="border-left: 3px solid #E6A23C; padding-left: 1em;">
-							<div class="fragment fade-in" style="margin: 0.8em 0;">
-								<p style="font-size: 0.7em; color: #E6A23C; font-weight: bold; margin: 0;">Q2 2025</p>
-								<p style="font-size: 0.65em; margin: 0.3em 0;">Déploiement en production au BTS Biarritz</p>
-							</div>
-							<div class="fragment fade-in" style="margin: 0.8em 0;">
-								<p style="font-size: 0.7em; color: #E6A23C; font-weight: bold; margin: 0;">Q3 2025</p>
-								<p style="font-size: 0.65em; margin: 0.3em 0;">Retours utilisateurs et itérations v1.1</p>
-							</div>
-							<div class="fragment fade-in" style="margin: 0.8em 0;">
-								<p style="font-size: 0.7em; color: #E6A23C; font-weight: bold; margin: 0;">Q4 2025</p>
-								<p style="font-size: 0.65em; margin: 0.3em 0;">Notifications push + API REST + App mobile (alpha)</p>
-							</div>
-							<div class="fragment fade-in" style="margin: 0.8em 0;">
-								<p style="font-size: 0.7em; color: #E6A23C; font-weight: bold; margin: 0;">Q1 2026</p>
-								<p style="font-size: 0.65em; margin: 0.3em 0;">Analyse IA + Watermarking + v2.0 production</p>
-							</div>
-							<div class="fragment fade-in" style="margin: 0.8em 0;">
-								<p style="font-size: 0.7em; color: #E6A23C; font-weight: bold; margin: 0;">Q2-Q4 2026</p>
-								<p style="font-size: 0.65em; margin: 0.3em 0;">Scalabilité + Multi-école (SaaS) + Édition collaborative</p>
-							</div>
-						</div>
+					<div class="feature-item fragment fade-left">
+						<h3>Évolutions futures</h3>
+						<ul style="font-size: 0.65em; margin-left: 1.5em; margin-top: 0.5em;">
+							<li>Notifications push transcodage</li>
+							<li>API REST pour intégrations</li>
+							<li>CI/CD automatisé</li>
+						</ul>
 					</div>
-				</section>
+				</div>
 			</section>
 
-			<!-- SLIDE 12: CONCLUSION -->
+			<!-- POSITIONNEMENT INDIVIDUEL -->
+			<section>
+				<h2 class="section-title">Positionnement Individuel</h2>
+				<div style="text-align: left; max-width: 900px; margin: 0.5em auto; font-size: 0.7em;">
+					<div class="feature-item fragment fade-in" style="margin-bottom: 0.4em; padding: 0.5em 0.8em;">
+						<h3>Arthur BAROS <span style="font-weight: normal; font-size: 0.75em; color: #666;">- Proxy PO</span></h3>
+						<p>Relation commanditaire, documentation Doxygen, rôles et permissions Spatie</p>
+					</div>
+					<div class="feature-item fragment fade-in" style="margin-bottom: 0.4em; padding: 0.5em 0.8em;">
+						<h3>Kamelia HAMCHOUCHE <span style="font-weight: normal; font-size: 0.75em; color: #666;">- Scrum Master</span></h3>
+						<p>Pilotage agile, tests fonctionnels, gestion des utilisateurs et import CSV élèves</p>
+					</div>
+					<div class="feature-item fragment fade-in" style="margin-bottom: 0.4em; padding: 0.5em 0.8em;">
+						<h3>David LOUSTAU-CAZAUX <span style="font-weight: normal; font-size: 0.75em; color: #666;">- Réf. Technique</span></h3>
+						<p>Architecture Docker dev/prod, tests unitaires et d'intégration, sécurisation et déploiement</p>
+					</div>
+					<div class="feature-item fragment fade-in" style="margin-bottom: 0.4em; padding: 0.5em 0.8em;">
+						<h3>Liam LUCAS <span style="font-weight: normal; font-size: 0.75em; color: #666;">- Réf. Qualité</span></h3>
+						<p>Tests et documentation PHPDoc/Doxygen, gestion des miniatures, streaming, sécurisation et déploiement</p>
+					</div>
+					<div class="feature-item fragment fade-in" style="margin-bottom: 0.4em; padding: 0.5em 0.8em;">
+						<h3>Laura Elena NUNEZ RODRIGUEZ <span style="font-weight: normal; font-size: 0.75em; color: #666;">- Réf. Frontend</span></h3>
+						<p>Interface transferts et administration, transcodage par dossier, recherche et UX</p>
+					</div>
+				</div>
+			</section>
+
+			<!-- CONCLUSION -->
 			<section class="conclusion-bg">
 				<img src="logo_BTS_Play.png" alt="BTSPlay Logo" class="fragment fade-in" style="width: 150px; height: auto; margin-bottom: 0.8em; opacity: 0.9;">
 				<h2 class="fragment fade-in" style="color: white;">BTSPlay</h2>
 				<div class="fragment fade-in" style="color: white; margin-top: 1.5em; line-height: 1.6;">
-					<p class="fragment fade-up">Solution complète de gestion d'actifs vidéo</p>
-					<p class="fragment fade-up">Conçue par des étudiants, pour des étudiants</p>
-					<p class="fragment fade-up">Prête pour un déploiement en production</p>
-					<p class="fragment fade-up">Technologie moderne et scalable</p>
+					<p class="fragment fade-up">MAM complet pour le BTS Audiovisuel du Lycée René Cassin</p>
+					<p class="fragment fade-up">Reprise et refonte totale sur Laravel 12 + Docker</p>
+					<p class="fragment fade-up">Déploiement production sur SERV-BTSPLAY-01 via Tailscale VPN</p>
+					<p class="fragment fade-up">Parcours D : Intégration, Sécurité, Déploiement maîtrisés</p>
 				</div>
 				<div class="fragment fade-in" style="margin-top: 2em; padding: 1em; background: rgba(255,255,255,0.1); border-radius: 6px;">
 					<h3 style="color: white; font-size: 1.2em; margin-bottom: 0.5em;">Merci de votre attention !</h3>
