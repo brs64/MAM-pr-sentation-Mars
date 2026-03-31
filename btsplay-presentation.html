@@ -554,23 +554,6 @@
 					</div>
 				</section>
 
-				<section>
-					<h3 style="color: #2C3E50; border-bottom: 2px solid #E6A23C; padding-bottom: 0.3em; display: inline-block;">Docker Production</h3>
-					<div style="text-align: left; max-width: 850px; margin: 1em auto;">
-						<div class="feature-item">
-							<h3>Dockerfile.prod multi-stage</h3>
-							<ul style="font-size: 0.6em; margin-left: 1.5em; margin-top: 0.3em;">
-								<li><strong>base</strong> : PHP 8.3-FPM + extensions + FFmpeg</li>
-								<li><strong>build</strong> : Composer install + npm ci + build assets</li>
-								<li><strong>final</strong> : Image allégée, entrypoint auto-migrate/seed</li>
-								<li><strong>nginx</strong> : Fichiers statiques copiés depuis le build</li>
-							</ul>
-						</div>
-						<div class="highlight-box fragment fade-in" style="margin-top: 1em;">
-							<p>Image unique <code style="background: rgba(255,255,255,0.2);">btsplay-app:prod</code> partagée entre laravel et queue, .env hors image, mots de passe externalisés</p>
-						</div>
-					</div>
-				</section>
 			</section>
 
 			<!-- CAHIER DE RECETTES -->
