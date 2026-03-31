@@ -584,34 +584,56 @@
 				</section>
 			</section>
 
-			<!-- SLIDE 8: TESTS -->
+			<!-- TESTS -->
 			<section>
-				<h2 class="section-title">Tests PHPUnit</h2>
-				<div style="text-align: left; max-width: 850px; margin: 1em auto;">
-					<div class="highlight-box" style="background: #2C3E50;">
-						<p style="font-size: 0.85em;"><strong>167 tests</strong> dans 16 fichiers (Feature + Unit) - BDD SQLite in-memory</p>
-					</div>
-					<div class="feature-grid" style="margin-top: 1em;">
-						<div class="feature-item fragment fade-in">
-							<h3>Feature Tests (14 fichiers)</h3>
-							<ul style="font-size: 0.6em; margin-left: 1.5em; margin-top: 0.3em;">
-								<li>AdminController (25 tests)</li>
-								<li>TransfertController (16 tests)</li>
-								<li>SearchController (15 tests)</li>
-								<li>MediaThumbnailService (15 tests)</li>
-								<li>StreamController (11 tests)</li>
-								<li>MediaController, FileExplorer, Permissions, Auth...</li>
-							</ul>
-						</div>
-						<div class="feature-item fragment fade-in">
-							<h3>Unit Tests (2 fichiers)</h3>
-							<ul style="font-size: 0.6em; margin-left: 1.5em; margin-top: 0.3em;">
-								<li>MediaService (32 tests)</li>
-								<li>FfastransService (20 tests)</li>
-							</ul>
+				<section>
+					<h2 class="section-title">Tests PHPUnit</h2>
+					<div style="text-align: left; max-width: 850px; margin: 1em auto;">
+						<div class="feature-grid" style="margin-top: 1em;">
+							<div class="feature-item fragment fade-in">
+								<h3>Médias (91 tests)</h3>
+								<p>Controllers, miniatures, indexation, streaming</p>
+							</div>
+							<div class="feature-item fragment fade-in">
+								<h3>Transcodage (45 tests)</h3>
+								<p>FFAStrans, transferts, jobs asynchrones</p>
+							</div>
+							<div class="feature-item fragment fade-in">
+								<h3>Navigation (41 tests)</h3>
+								<p>Recherche, explorateur de fichiers, arborescence NAS</p>
+							</div>
+							<div class="feature-item fragment fade-in">
+								<h3>Administration (38 tests)</h3>
+								<p>Panel admin, permissions, profils, authentification</p>
+							</div>
 						</div>
 					</div>
-				</div>
+					<p style="font-size: 0.6em; color: #999; margin-top: 1em;">
+						⬇️ Couverture
+					</p>
+				</section>
+
+				<section>
+					<h3 style="color: #2C3E50; border-bottom: 2px solid #E6A23C; padding-bottom: 0.3em; display: inline-block;">Couverture : Objectif et Résultat</h3>
+					<div style="display: grid; grid-template-columns: 1fr 1fr; gap: 1.5em; margin-top: 1em; text-align: left;">
+						<div class="feature-item fragment fade-in">
+							<h3>Objectif : 70-80%</h3>
+							<p>Standard professionnel visé, priorisation des composants critiques</p>
+						</div>
+						<div class="feature-item fragment fade-in">
+							<h3>Résultat : 66% lignes</h3>
+							<ul style="font-size: 0.6em; margin-left: 1.5em; margin-top: 0.3em;">
+								<li>SearchController, ProfileController, Auth : 100%</li>
+								<li>FfastransService : 96%</li>
+								<li>MediaController : 93%</li>
+								<li>TransfertController : 88%</li>
+							</ul>
+						</div>
+					</div>
+					<div class="highlight-box fragment fade-in" style="margin-top: 1em;">
+						<p>Proche de l'objectif de 70% : les composants critiques (auth, recherche, transcodage) sont bien couverts</p>
+					</div>
+				</section>
 			</section>
 
 			<!-- CAHIER DE RECETTES -->
