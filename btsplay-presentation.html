@@ -369,28 +369,6 @@
 							<span class="tech-badge">phpMyAdmin</span>
 						</div>
 					</div>
-					<p style="font-size: 0.6em; color: #999; margin-top: 1em;">
-						⬇️ Workflow de transcodage
-					</p>
-				</section>
-
-				<section>
-					<h3 style="color: #2C3E50; border-bottom: 2px solid #E6A23C; padding-bottom: 0.3em; display: inline-block;">Workflow de Transcodage</h3>
-					<div style="text-align: left; max-width: 850px; margin: 1em auto;">
-						<div class="feature-item">
-							<p style="font-size: 0.7em; line-height: 1.6; margin-bottom: 0.8em;">
-								<strong>Processus automatique :</strong>
-							</p>
-							<ol style="font-size: 0.65em; margin-left: 1.5em; line-height: 1.8;">
-								<li>Post-Production livre MXF + MP4 au Contrôle Qualité</li>
-								<li>Fichiers conformes transférés sur NAS PAD et NAS Archivage</li>
-								<li>BTSPlay détecte les nouveaux fichiers, crée les assets en BDD</li>
-								<li>Réconciliation : association MXF ↔ MP4 par nom de fichier</li>
-								<li>Si fichier manquant : job de transcodage via API FFAStrans (port 65445)</li>
-								<li>Surveillance du job (polling) et mise à jour BDD</li>
-							</ol>
-						</div>
-					</div>
 				</section>
 			</section>
 
@@ -398,132 +376,26 @@
 			<section>
 				<section>
 					<h2 class="section-title">Architecture Système</h2>
-					<div style="display: grid; grid-template-columns: 1fr 1fr; gap: 1.5em; margin-top: 1em; text-align: left;">
-						<div class="feature-item">
-							<h3>Production (5 services)</h3>
-							<ul style="font-size: 0.6em; margin-left: 1.5em; margin-top: 0.3em;">
+					<div style="text-align: left; max-width: 850px; margin: 0 auto;">
+						<div class="feature-item" style="margin: 0.8em 0;">
+							<h3>Services Docker Production (5 conteneurs)</h3>
+							<ul style="font-size: 0.6em; margin-top: 0.3em; margin-left: 1.5em;">
 								<li><strong>btsplay-nginx</strong> - Reverse proxy (8080)</li>
 								<li><strong>btsplay-laravel</strong> - Application PHP-FPM</li>
 								<li><strong>btsplay-queue</strong> - Worker transcodage</li>
 								<li><strong>btsplay-mysql</strong> - Base de données</li>
 								<li><strong>btsplay-phpmyadmin</strong> - Admin DB (8001)</li>
-								<li>Image <code>btsplay-app:prod</code> multi-stage</li>
-								<li>Accès direct aux vrais NAS via SMBv1</li>
 							</ul>
 						</div>
-						<div class="feature-item">
-							<h3>Dev ajoute (+2 services)</h3>
-							<ul style="font-size: 0.6em; margin-left: 1.5em; margin-top: 0.3em;">
-								<li><strong>btsplay-ftp-pad</strong> - Simule NAS PAD (21001)</li>
-								<li><strong>btsplay-ftp-arch</strong> - Simule NAS Archivage (21002)</li>
-								<li>Code source monté en volume (hot reload)</li>
-								<li>Dockerfile.dev au lieu de multi-stage</li>
-								<li>Volumes supplémentaires : ftp-pad-data, ftp-arch-data</li>
-							</ul>
-						</div>
-					</div>
-					<p style="font-size: 0.6em; color: #999; margin-top: 1em; text-align: center;">
-						⬇️ Naviguer vers le bas pour les détails de chaque service
-					</p>
-				</section>
-
-				<!-- Architecture: Nginx -->
-				<section>
-					<h3 style="color: #2C3E50; border-bottom: 2px solid #E6A23C; padding-bottom: 0.3em; display: inline-block;">btsplay-nginx</h3>
-					<div style="text-align: left; max-width: 800px; margin: 1em auto;">
-						<div class="feature-item">
-							<p style="font-size: 0.7em; line-height: 1.6;">
-								<strong>Rôle :</strong> Serveur web reverse proxy<br/>
-								<strong>Technologies :</strong> Nginx (Alpine)<br/>
-								<strong>Responsabilités :</strong>
-							</p>
-							<ul style="font-size: 0.65em; margin-left: 1.5em; margin-top: 0.5em;">
-								<li>Exposition de l'application sur le port 8080</li>
-								<li>Proxy des requêtes vers PHP-FPM</li>
-								<li>Gestion des fichiers statiques (CSS, JS, images)</li>
-								<li>Optimisation des performances avec cache</li>
-								<li>Configuration SSL/TLS pour production</li>
-							</ul>
+						<div class="highlight-box">
+							<p style="font-size: 0.8em;">Image <code style="background: rgba(255,255,255,0.2);">btsplay-app:prod</code> multi-stage | Accès NAS via SMBv1</p>
 						</div>
 					</div>
 				</section>
 
-				<!-- Architecture: Laravel + Queue -->
 				<section>
-					<h3 style="color: #2C3E50; border-bottom: 2px solid #E6A23C; padding-bottom: 0.3em; display: inline-block;">btsplay-laravel & btsplay-queue</h3>
-					<div style="display: grid; grid-template-columns: 1fr 1fr; gap: 1.5em; margin-top: 1em; text-align: left;">
-						<div class="feature-item">
-							<h3>btsplay-laravel</h3>
-							<p style="font-size: 0.65em; color: #666; margin-bottom: 0.3em;">Coeur de l'application (PHP-FPM)</p>
-							<ul style="font-size: 0.6em; margin-left: 1.5em; margin-top: 0.3em;">
-								<li>Laravel 12, PHP 8.2+, Eloquent ORM</li>
-								<li>Routes, contrôleurs, auth (Breeze + Spatie)</li>
-								<li>Communication FTP avec les NAS</li>
-								<li>Génération miniatures et streaming HLS</li>
-							</ul>
-						</div>
-						<div class="feature-item">
-							<h3>btsplay-queue</h3>
-							<p style="font-size: 0.65em; color: #666; margin-bottom: 0.3em;">Worker pour jobs asynchrones</p>
-							<ul style="font-size: 0.6em; margin-left: 1.5em; margin-top: 0.3em;">
-								<li>Laravel Queue (database driver)</li>
-								<li>Jobs de transcodage FFAStrans</li>
-								<li>Surveillance des conversions vidéo</li>
-								<li>Réconciliation automatique des contenus</li>
-							</ul>
-						</div>
-					</div>
-				</section>
-
-				<!-- Architecture: MySQL -->
-				<section>
-					<h3 style="color: #2C3E50; border-bottom: 2px solid #E6A23C; padding-bottom: 0.3em; display: inline-block;">btsplay-mysql</h3>
-					<div style="text-align: left; max-width: 800px; margin: 1em auto;">
-						<div class="feature-item">
-							<p style="font-size: 0.7em; line-height: 1.6;">
-								<strong>Rôle :</strong> Base de données relationnelle<br/>
-								<strong>Technologies :</strong> MySQL 5.7<br/>
-								<strong>Contenu :</strong>
-							</p>
-							<ul style="font-size: 0.65em; margin-left: 1.5em; margin-top: 0.5em;">
-								<li>Table <code>medias</code> : métadonnées des vidéos</li>
-								<li>Tables <code>users</code>, <code>eleves</code>, <code>professeurs</code></li>
-								<li>Tables <code>roles</code> et <code>permissions</code> (Spatie)</li>
-								<li>Table <code>jobs</code> : queue de transcodage</li>
-								<li>Migrations Laravel pour versioning du schéma</li>
-							</ul>
-						</div>
-					</div>
-				</section>
-
-				<!-- Architecture: Serveurs FTP (NAS) -->
-				<section>
-					<h3 style="color: #2C3E50; border-bottom: 2px solid #E6A23C; padding-bottom: 0.3em; display: inline-block;">Serveurs FTP (Accès NAS)</h3>
-					<div style="display: grid; grid-template-columns: 1fr 1fr; gap: 1.5em; margin-top: 1em; text-align: left;">
-						<div class="feature-item">
-							<h3>btsplay-ftp-pad (NAS PAD)</h3>
-							<ul style="font-size: 0.65em; margin-left: 1.5em; margin-top: 0.5em;">
-								<li>Port : 21001</li>
-								<li>Fichiers MXF XDCAM HD 50Mb/s</li>
-								<li>Format professionnel pour montage</li>
-								<li>Arborescence : année\projet\répertoire\fichiers</li>
-							</ul>
-						</div>
-						<div class="feature-item">
-							<h3>btsplay-ftp-arch (NAS Archivage)</h3>
-							<ul style="font-size: 0.65em; margin-left: 1.5em; margin-top: 0.5em;">
-								<li>Port : 21002</li>
-								<li>Fichiers MP4 H.264 25Mb/s</li>
-								<li>Archivage et consultation web</li>
-								<li>Source pour streaming HLS</li>
-							</ul>
-						</div>
-					</div>
-					<div class="highlight-box" style="margin-top: 1em;">
-						<p style="font-size: 0.8em;">
-							<strong>Dev :</strong> Pure-FTPd simule les NAS | <strong>Prod :</strong> Accès direct via SMBv1 + FTP
-						</p>
-					</div>
+					<h3 style="color: #2C3E50; border-bottom: 2px solid #E6A23C; padding-bottom: 0.3em; display: inline-block;">Schéma d'Architecture</h3>
+					<img src="Schema_BTSPlay.drawio3.webp" alt="Schéma architecture BTSPlay" style="max-height: 500px; margin-top: 0.5em;">
 				</section>
 
 			</section>
@@ -639,13 +511,70 @@
 				</section>
 			</section>
 
+			<!-- DÉPLOIEMENT -->
+			<section>
+				<section>
+					<h2 class="section-title">Déploiement</h2>
+					<div style="text-align: left; max-width: 850px; margin: 0 auto;">
+						<div class="feature-item" style="margin-bottom: 0.8em;">
+							<h3>Serveur SERV-BTSPLAY-01</h3>
+							<p>Windows Server 2022, on-premise au Lycée - 2x12 coeurs, 16 Go RAM - Docker Desktop - Opérationnel depuis octobre 2025</p>
+						</div>
+					</div>
+					<div style="display: flex; gap: 0.8em; align-items: center; justify-content: center;">
+						<img src="Picture1.png" alt="Salle serveur" style="max-height: 350px; border-radius: 6px;">
+						<img src="Picture2.png" alt="Salle serveur" style="max-height: 350px; border-radius: 6px;">
+					</div>
+				</section>
+
+				<section>
+					<h3 style="color: #2C3E50; border-bottom: 2px solid #E6A23C; padding-bottom: 0.3em; display: inline-block;">Sécurisation</h3>
+					<div class="feature-grid" style="margin-top: 1em;">
+						<div class="feature-item fragment fade-in">
+							<h3>Accès distant</h3>
+							<p>Tailscale VPN (Wireguard) avec 2FA obligatoire, ré-authentification quotidienne</p>
+						</div>
+						<div class="feature-item fragment fade-in">
+							<h3>SSH</h3>
+							<p>Port obfusqué (10022), clé publique uniquement, admin interdit</p>
+						</div>
+						<div class="feature-item fragment fade-in">
+							<h3>Firewall</h3>
+							<p>Audit NMAP, ports fermés, spouleur d'impression désactivé, scripts PS bloqués</p>
+						</div>
+						<div class="feature-item fragment fade-in">
+							<h3>Comptes</h3>
+							<p>Utilisateurs sans privilège, moindre privilège, verrouillage après 3 tentatives</p>
+						</div>
+					</div>
+				</section>
+
+				<section>
+					<h3 style="color: #2C3E50; border-bottom: 2px solid #E6A23C; padding-bottom: 0.3em; display: inline-block;">Docker Production</h3>
+					<div style="text-align: left; max-width: 850px; margin: 1em auto;">
+						<div class="feature-item">
+							<h3>Dockerfile.prod multi-stage</h3>
+							<ul style="font-size: 0.6em; margin-left: 1.5em; margin-top: 0.3em;">
+								<li><strong>base</strong> : PHP 8.3-FPM + extensions + FFmpeg</li>
+								<li><strong>build</strong> : Composer install + npm ci + build assets</li>
+								<li><strong>final</strong> : Image allégée, entrypoint auto-migrate/seed</li>
+								<li><strong>nginx</strong> : Fichiers statiques copiés depuis le build</li>
+							</ul>
+						</div>
+						<div class="highlight-box fragment fade-in" style="margin-top: 1em;">
+							<p>Image unique <code style="background: rgba(255,255,255,0.2);">btsplay-app:prod</code> partagée entre laravel et queue, .env hors image, mots de passe externalisés</p>
+						</div>
+					</div>
+				</section>
+			</section>
+
 			<!-- CAHIER DE RECETTES -->
 			<section>
 				<h2 class="section-title">Bilan Cahier de Recettes</h2>
-				<div style="display: grid; grid-template-columns: repeat(3, 1fr); gap: 1em; margin-top: 1em; text-align: left;">
-					<div class="feature-item fragment fade-in" style="border-left-color: #27ae60;">
+				<div style="display: grid; grid-template-columns: repeat(3, 1fr); gap: 0.6em; margin-top: 0.5em; text-align: left;">
+					<div class="feature-item fragment fade-in" style="border-left-color: #27ae60; padding: 0.5em;">
 						<h3 style="color: #27ae60;">15 US OK</h3>
-						<ul style="font-size: 0.65em; margin-left: 1.5em; margin-top: 0.5em;">
+						<ul style="font-size: 0.6em; margin-left: 1.5em; margin-top: 0.3em;">
 							<li>Connexion / Accès non autorisé</li>
 							<li>Consultation vidéos (Étudiant/Prof)</li>
 							<li>Modification métadonnées</li>
@@ -654,17 +583,17 @@
 							<li>Gestion serveurs, Création champs</li>
 						</ul>
 					</div>
-					<div class="feature-item fragment fade-in" style="border-left-color: #e74c3c;">
+					<div class="feature-item fragment fade-in" style="border-left-color: #e74c3c; padding: 0.5em;">
 						<h3 style="color: #e74c3c;">3 US KO / NOK</h3>
-						<ul style="font-size: 0.65em; margin-left: 1.5em; margin-top: 0.5em;">
+						<ul style="font-size: 0.6em; margin-left: 1.5em; margin-top: 0.3em;">
 							<li>Déplacement vidéo vers NAS diffusion (S-31)</li>
 							<li>Extraction métadonnées techniques FFAStrans (S-10)</li>
 							<li>Suppression vidéo (Prof/Admin)</li>
 						</ul>
 					</div>
-					<div class="feature-item fragment fade-in" style="border-left-color: #E6A23C;">
+					<div class="feature-item fragment fade-in" style="border-left-color: #E6A23C; padding: 0.5em;">
 						<h3 style="color: #E6A23C;">5 US à améliorer</h3>
-						<ul style="font-size: 0.65em; margin-left: 1.5em; margin-top: 0.5em;">
+						<ul style="font-size: 0.6em; margin-left: 1.5em; margin-top: 0.3em;">
 							<li>Retour visuel réconciliation</li>
 							<li>Priorisation jobs FFAStrans</li>
 							<li>Cache arborescence NAS</li>
@@ -673,6 +602,7 @@
 						</ul>
 					</div>
 				</div>
+				<img src="IMG_20260330_111900.webp" alt="Cahier de recettes" style="max-width: 50%; margin-top: 0.8em; border-radius: 6px;">
 			</section>
 
 			<!-- ======================== -->
