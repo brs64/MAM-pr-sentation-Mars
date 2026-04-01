@@ -69,7 +69,7 @@
 		.reveal .feature-item p {
 			font-size: 0.65em;
 			margin: 0;
-			color: #555;
+			color: #333;
 		}
 
 		.reveal .tech-badge {
@@ -80,6 +80,11 @@
 			border-radius: 4px;
 			font-size: 0.55em;
 			margin: 0.2em;
+		}
+
+		.reveal .tech-badge.dev {
+			background: #E6A23C;
+			color: #2C3E50;
 		}
 
 		.reveal .demo-container {
@@ -131,7 +136,7 @@
 		}
 
 		.reveal .subtitle {
-			color: #666;
+			color: #444;
 			font-size: 0.6em;
 			margin-top: 0.8em;
 		}
@@ -159,6 +164,76 @@
 			padding: 0.1em 0.4em;
 			border-radius: 3px;
 			font-size: 0.8em;
+		}
+
+		/* Override highlight.js colors for light background */
+		.reveal pre code.language-php {
+			background: #f8f9fa !important;
+			color: #24292e !important;
+		}
+
+		.reveal pre code.language-php .hljs-comment,
+		.reveal pre code.language-php .hljs-doctag {
+			color: #6a737d !important;
+		}
+
+		.reveal pre code.language-php .hljs-keyword {
+			color: #d73a49 !important;
+		}
+
+		.reveal pre code.language-php .hljs-variable {
+			color: #6f42c1 !important;
+		}
+
+		.reveal pre code.language-php .hljs-string {
+			color: #032f62 !important;
+		}
+
+		.reveal pre code.language-php .hljs-title.function_,
+		.reveal pre code.language-php .hljs-title {
+			color: #6f42c1 !important;
+		}
+
+		.reveal pre code.language-php .hljs-attr {
+			color: #005cc5 !important;
+		}
+
+		/* Container for horizontal scrolling */
+		.reveal .scroll-wrapper {
+			width: 100%;
+			height: 600px; /* Adjust based on your title height */
+			overflow-x: auto;
+			overflow-y: hidden;
+			border: 1px solid #ccc;
+			background: white;
+			/* Optional: custom scrollbar styling for better visibility */
+		}
+
+		.reveal .scroll-wrapper img {
+			height: 100%;
+			max-width: none !important; /* Forces the image to exceed slide width */
+			width: auto;
+			display: block;
+		}
+
+		/* Customizing the scrollbar to make it more "professional" */
+		.reveal .scroll-wrapper::-webkit-scrollbar {
+			height: 12px;
+		}
+		.reveal .scroll-wrapper::-webkit-scrollbar-thumb {
+			background: #E6A23C;
+			border-radius: 10px;
+		}
+		.reveal .scroll-wrapper::-webkit-scrollbar-track {
+			background: #f1f1f1;
+		}
+
+		.reveal div::-webkit-scrollbar {
+			width: 10px;
+		}
+		.reveal div::-webkit-scrollbar-thumb {
+			background: #E6A23C; 
+			border-radius: 5px;
 		}
 	</style>
 </head>
@@ -322,7 +397,7 @@
 					<div style="display: grid; grid-template-columns: repeat(3, 1fr); gap: 1em; margin-top: 1em;">
 						<div class="feature-item fragment fade-in">
 							<h3>Étudiant en production</h3>
-							<p>Dépose un MXF sur le NAS. BTSPlay indexe, génère une miniature et transcrit en MP4.</p>
+							<p>Dépose un MXF sur le NAS. BTSPlay indexe, génère une miniature et transcode en MP4.</p>
 						</div>
 						<div class="feature-item fragment fade-in">
 							<h3>Professeur en évaluation</h3>
@@ -330,10 +405,10 @@
 						</div>
 						<div class="feature-item fragment fade-in">
 							<h3>Admin en maintenance</h3>
-							<p>Déclencher les transcodages nécessaires via liste d'attente.</p>
+							<p>Déclenche les transcodages nécessaires via liste d'attente.</p>
 						</div>
 					</div>
-					<p style="font-size: 0.6em; color: #999; margin-top: 1em;">
+					<p style="font-size: 0.6em; color: #666; margin-top: 1em;">
 						⬇️ Scénarios avancés
 					</p>
 				</section>
@@ -367,7 +442,7 @@
 			<!-- SLIDE 5: DÉMO -->
 			<section>
 				<h2 class="section-title">Démonstration Live</h2>
-				<p style="color: #666; margin-bottom: 0.5em;">
+				<p style="color: #444; margin-bottom: 0.5em;">
 					Application en action sur <code>serv-btsplay-01:8080</code>
 				</p>
 				<div class="demo-container">
@@ -396,23 +471,22 @@
 							<span class="tech-badge">Laravel 12</span>
 							<span class="tech-badge">MySQL 5.7</span>
 							<span class="tech-badge">Spatie Permissions</span>
+							<span class="tech-badge dev">PHPUnit</span>
+							<span class="tech-badge dev">Mockery</span>
 						</div>
 						<div class="fragment fade-in">
 							<h3 style="color: #2C3E50; margin-bottom: 0.5em; font-size: 0.9em;">Frontend</h3>
-							<span class="tech-badge">Vite</span>
 							<span class="tech-badge">Tailwind CSS 4.0</span>
 							<span class="tech-badge">Alpine.js</span>
 							<span class="tech-badge">Plyr</span>
 							<span class="tech-badge">HLS.js</span>
-							<span class="tech-badge">Font Awesome</span>
+							<span class="tech-badge dev">Vite</span>
 						</div>
 						<div class="fragment fade-in">
 							<h3 style="color: #2C3E50; margin-bottom: 0.5em; font-size: 0.9em;">Infrastructure</h3>
 							<span class="tech-badge">Docker Compose</span>
 							<span class="tech-badge">Nginx</span>
-							<span class="tech-badge">FFmpeg</span>
-							<span class="tech-badge">Pure-FTPd</span>
-							<span class="tech-badge">Tailscale VPN</span>
+							<span class="tech-badge">FFAStrans</span>
 							<span class="tech-badge">phpMyAdmin</span>
 						</div>
 					</div>
@@ -444,6 +518,11 @@
 					<h3 style="color: #2C3E50; border-bottom: 2px solid #E6A23C; padding-bottom: 0.3em; display: inline-block;">Schéma d'Architecture</h3>
 					<img src="Schema_BTSPlay.drawio3.webp" alt="Schéma architecture BTSPlay" style="max-height: 500px; margin-top: 0.5em;">
 				</section>
+				
+				<section>
+					<h3 style="color: #2C3E50; border-bottom: 2px solid #E6A23C; padding-bottom: 0.3em; display: inline-block;">Docker-compose de production</h3>
+					<img src="Dockerprod.png" alt="Schéma architecture BTSPlay" style="max-height: 500px; margin-top: 0.5em;">
+				</section>
 
 			</section>
 
@@ -454,22 +533,22 @@
 					<div class="feature-grid">
 						<div class="feature-item fragment fade-right">
 							<h3>Synchronisation bi-directionnelle</h3>
-							<p>Réconcilier deux NAS avec des fichiers dans différents formats et éviter les doublons</p>
+							<p>Réconcilier les deux NAS avec des fichiers dans différents formats et éviter les doublons</p>
 						</div>
 						<div class="feature-item fragment fade-right">
-							<h3>Streaming vidéo performant</h3>
-							<p>Segmentation HLS à la volée pour des fichiers de plusieurs Go sans saturer le serveur</p>
+							<h3>Ajout de données personnalisées hétérogènes</h3>
+							<p>Stockage format JSON et ajout des éléments d'interface pour interagir facilement avec en BDD</p>
 						</div>
 						<div class="feature-item fragment fade-right">
 							<h3>Transcodage des vidéos</h3>
-							<p>Transcodage de vidéos longues sans bloquer l'interface, avec gestion des échecs et reprises</p>
+							<p>Transcodage de vidéos longues / nombreuses sans bloquer l'interface, avec gestion des échecs et reprises</p>
 						</div>
 						<div class="feature-item fragment fade-right">
 							<h3>Permissions granulaires</h3>
-							<p>Système de rôles complexe permettant un contrôle fin des accès selon le profil utilisateur</p>
+							<p>Système de rôles adapté permettant un contrôle fin des accès selon le profil utilisateur</p>
 						</div>
 					</div>
-					<p style="font-size: 0.6em; color: #999; margin-top: 1em;">
+					<p style="font-size: 0.6em; color: #666; margin-top: 1em;">
 						⬇️ Solutions apportées
 					</p>
 				</section>
@@ -478,37 +557,87 @@
 				<section>
 					<h3 style="color: #2C3E50; border-bottom: 2px solid #E6A23C; padding-bottom: 0.3em; display: inline-block;">Nos Solutions</h3>
 					<div style="text-align: left; max-width: 800px; margin: 1em auto;">
+						<div class="feature-grid">
 						<div class="feature-item fragment fade-in">
-							<p style="font-size: 0.7em; line-height: 1.6;"><strong>Pour la synchronisation :</strong></p>
-							<ul style="font-size: 0.65em; margin-left: 1.5em; margin-top: 0.5em;">
-								<li>Algorithme de matching par nom de fichier et métadonnées</li>
-								<li>Détection des fichiers orphelins sur chaque NAS</li>
+							<p style="font-size: 0.7em; line-height: 1.6;"><strong>Synchronisation :</strong></p>
+							<ul style="font-size: 0.65em; margin-left: 1.5em; margin-top: 0.3em;">
+								<li>Indexation BDD par parcours d'arborescence récursif asynchrone</li>
+								<li>Nettoyage des médias supprimés ou inexistants sur les NAS</li>
 							</ul>
 						</div>
-						<div class="feature-item fragment fade-in" style="margin-top: 0.8em;">
-							<p style="font-size: 0.7em; line-height: 1.6;"><strong>Pour le streaming :</strong></p>
-							<ul style="font-size: 0.65em; margin-left: 1.5em; margin-top: 0.5em;">
-								<li>Génération de segments HLS à la demande via contrôleur dédié</li>
-								<li>Cache des segments fréquemment demandés</li>
-								<li>Compression et optimisation des miniatures</li>
+						<div class="feature-item fragment fade-in">
+							<p style="font-size: 0.7em; line-height: 1.6;"><strong>Ajout de données :</strong></p>
+							<ul style="font-size: 0.65em; margin-left: 1.5em; margin-top: 0.3em;">
+								<li>Champs personnalisés JSON par média</li>
+								<li>Autocomplétion et import CSV d'élèves</li>
 							</ul>
 						</div>
-						<div class="feature-item fragment fade-in" style="margin-top: 0.8em;">
-							<p style="font-size: 0.7em; line-height: 1.6;"><strong>Pour les jobs asynchrones :</strong></p>
-							<ul style="font-size: 0.65em; margin-left: 1.5em; margin-top: 0.5em;">
-								<li>Laravel Queue avec worker dédié en container</li>
-								<li>Notifications en temps réel de l'avancement</li>
+						<div class="feature-item fragment fade-in">
+							<p style="font-size: 0.7em; line-height: 1.6;"><strong>Transcodage :</strong></p>
+							<ul style="font-size: 0.65em; margin-left: 1.5em; margin-top: 0.3em;">
+								<li>File d'attente pour gros volumes de vidéos</li>
+								<li>Transcodage par dossier pour améliorer l'UX</li>
 							</ul>
+						</div>
+						<div class="feature-item fragment fade-in">
+							<p style="font-size: 0.7em; line-height: 1.6;"><strong>Gestion des rôles :</strong></p>
+							<ul style="font-size: 0.65em; margin-left: 1.5em; margin-top: 0.3em;">
+								<li>Spatie Permissions pour rôles et droits personnalisés</li>
+								<li>Rôles Admin et Professeur avec accès différenciés</li>
+							</ul>
+						</div>
 						</div>
 					</div>
+				</section>
+				
+				<section>
+					<h3 style="color: #2C3E50; border-bottom: 2px solid #E6A23C; display: inline-block;">Présentation du processus de synchronisation</h3>
+					<img src="Réconciliation.png" alt="Reconciliation" style="height: 610px">
+				</section>
+				
+				<section>
+					<h3 style="color: #2C3E50; border-bottom: 2px solid #E6A23C; display: inline-block;">Présentation du processus de synchronisation</h3>
+					<img src="Code-reconciliation.png" alt="Reconciliation" style="height: 610px">
+				</section>
+				
+				<section>
+					<h3 style="color: #2C3E50; border-bottom: 2px solid #E6A23C; display: inline-block;">Présentation du processus de transcodage</h3>
+					<img src="Transcodage.png" alt="Transcodage" style="max-height: 600px;">
 				</section>
 
 				<section>
 					<h3 style="color: #2C3E50; border-bottom: 2px solid #E6A23C; padding-bottom: 0.3em; display: inline-block;">FFAStrans</h3>
-					<p style="font-size: 0.65em; color: #666; margin-top: 0.3em;">Moteur de workflow de transcodage piloté par BTSPlay via API HTTP (port 65445)</p>
+					<p style="font-size: 0.65em; color: #444; margin-top: 0.3em;">Moteur de workflow de transcodage piloté par BTSPlay via API HTTP (port 65445)</p>
 					<img src="FFAStrans.webp" alt="FFAStrans" style="max-height: 450px; margin-top: 0.5em;">
 				</section>
+				
+				<section>
+					<h3 style="color: #2C3E50; border-bottom: 2px solid #E6A23C; display: inline-block;">
+						Processus complet de la file d'attente
+					</h3>
+					
+					<div class="scroll-wrapper">
+						<img src="hhhaaaaaaaaaaaaaaaaaaaaaaaa.svg" alt="Processus complet file d'attente">
+					</div>
+				</section>
 
+				<section>
+					<h3 style="color: #2C3E50; border-bottom: 2px solid #E6A23C; display: inline-block;">
+						Implémentation : Job de Transcodage
+					</h3>
+					
+					<div style="height: 650px; overflow-y: auto; overflow-x: hidden; border: 1px solid #ddd; background: #fff; margin: 20px auto; border-radius: 4px; width: 95%; box-shadow: 0 4px 12px rgba(0,0,0,0.1);">
+						
+						<img src="transcodingJob_handleMethod.png" 
+							alt="Code Laravel handle method" 
+							style="width: 100% !important; 
+									height: auto !important; 
+									max-width: none !important; 
+									max-height: none !important; 
+									display: block; 
+									margin: 0;">
+					</div>
+				</section>
 			</section>
 
 			<!-- TESTS -->
@@ -517,7 +646,7 @@
 					<h2 class="section-title">Tests PHPUnit</h2>
 					<div style="text-align: left; max-width: 850px; margin: 1em auto;">
 						<div class="highlight-box" style="background: #2C3E50;">
-							<p style="font-size: 0.85em;"><strong>215 tests</strong> - 16 fichiers - BDD SQLite in-memory - 5s</p>
+							<p style="font-size: 0.85em;"><strong>215 tests</strong> - 16 fichiers - BDD SQLite in-memory - 10s</p>
 						</div>
 						<div class="feature-grid" style="margin-top: 1em;">
 							<div class="feature-item fragment fade-in">
@@ -538,7 +667,7 @@
 							</div>
 						</div>
 					</div>
-					<p style="font-size: 0.6em; color: #999; margin-top: 1em;">
+					<p style="font-size: 0.6em; color: #666; margin-top: 1em;">
 						⬇️ Couverture
 					</p>
 				</section>
@@ -546,8 +675,9 @@
 				<section>
 					<h3 style="color: #2C3E50; border-bottom: 2px solid #E6A23C; padding-bottom: 0.3em; display: inline-block;">Couverture : Objectif et Résultat</h3>
 					<div class="feature-item fragment fade-in" style="margin-top: 1em; text-align: left; max-width: 700px; margin-left: auto; margin-right: auto;">
-						<h3>Objectif : 70%</h3>
+						<h3>Objectif : 70-80%</h3>
 						<p>Standard professionnel visé, priorisation des composants critiques</p>
+						<p style="font-size: 0.5em; margin-top: 0.3em; color: #666;">Sources : Google Testing Blog (75%), SonarQube (80%), Martin Fowler (80%)</p>
 					</div>
 					<div class="feature-item fragment fade-in" style="margin-top: 0.5em; max-width: 700px; margin-left: auto; margin-right: auto;">
 						<h3>Résultat : 66% lignes</h3>
@@ -600,44 +730,74 @@
 						</div>
 					</div>
 				</section>
+			
+				<section>
+					<h3 style="color: #2C3E50; border-bottom: 2px solid #E6A23C; padding-bottom: 0.3em; display: inline-block;">Sécurisation - Audit des ports ouverts</h3>
+					<div class="feature-item" style="margin-top: 0.3em; max-width: 600px; margin-left: auto; margin-right: auto; padding: 0.3em;">
+						<img src="Audit.png" alt="Audit ports" style="width: 100%; border-radius: 4px; filter: saturate(1.3) contrast(1.05);">
+					</div>
+				</section>
+				<section>
+					<h3 style="color: #2C3E50; border-bottom: 2px solid #E6A23C; padding-bottom: 0.3em; display: inline-block;">Sécurisation - Comptes créés</h3>
+					<div class="feature-item" style="margin-top: 0.3em; max-width: 600px; margin-left: auto; margin-right: auto; padding: 0.3em;">
+						<img src="Groupes.png" alt="Comptes créés" style="width: 100%; border-radius: 4px;">
+					</div>
+				</section>
+				
+				<section>
+					<h3 style="color: #2C3E50; border-bottom: 2px solid #E6A23C; padding-bottom: 0.3em; display: inline-block;">Sécurisation - Configuration VPN</h3>
+					<div class="feature-item" style="margin-top: 0.3em; max-width: 800px; margin-left: auto; margin-right: auto; padding-top: 0.3em; padding-bottom: 0.3em;">
+						<img src="Tailscale.png" alt="Tailscale VPN" style="max-width: 100%; border-radius: 4px;">
+					</div>
+				</section>
+				
 
 			</section>
 
 			<!-- CAHIER DE RECETTES -->
 			<section>
-				<h2 class="section-title">Bilan Cahier de Recettes</h2>
-				<div style="display: grid; grid-template-columns: repeat(3, 1fr); gap: 0.6em; margin-top: 0.5em; text-align: left;">
-					<div class="feature-item fragment fade-in" style="border-left-color: #27ae60; padding: 0.5em;">
-						<h3 style="color: #27ae60;">15 US OK</h3>
-						<ul style="font-size: 0.6em; margin-left: 1.5em; margin-top: 0.3em;">
-							<li>Connexion / Accès non autorisé</li>
-							<li>Consultation vidéos (Étudiant/Prof)</li>
-							<li>Modification métadonnées</li>
-							<li>Indexation, Recherche, Navigation</li>
-							<li>Réconciliation, Logs, Backup</li>
-							<li>Gestion serveurs, Création champs</li>
-						</ul>
+				<section>
+					<h2 class="section-title">Bilan Cahier de Recettes</h2>
+					<div style="display: grid; grid-template-columns: repeat(3, 1fr); gap: 0.6em; margin-top: 0.5em; text-align: left;">
+						<div class="feature-item fragment fade-in" style="border-left-color: #27ae60; padding: 0.5em;">
+							<h3 style="color: #27ae60;">15 US OK</h3>
+							<ul style="font-size: 0.6em; margin-left: 1.5em; margin-top: 0.3em;">
+								<li>Connexion / Accès non autorisé</li>
+								<li>Consultation vidéos (Étudiant/Prof)</li>
+								<li>Modification métadonnées</li>
+								<li>Indexation, Recherche, Navigation</li>
+								<li>Réconciliation, Logs, Backup</li>
+								<li>Gestion serveurs, Création champs</li>
+							</ul>
+						</div>
+						<div class="feature-item fragment fade-in" style="border-left-color: #e74c3c; padding: 0.5em;">
+							<h3 style="color: #e74c3c;">3 US KO / NOK</h3>
+							<ul style="font-size: 0.6em; margin-left: 1.5em; margin-top: 0.3em;">
+								<li>Déplacement vidéo vers NAS diffusion (S-31)</li>
+								<li>Extraction métadonnées techniques FFAStrans (S-10)</li>
+								<li>Suppression vidéo (Prof/Admin)</li>
+							</ul>
+						</div>
+						<div class="feature-item fragment fade-in" style="border-left-color: #E6A23C; padding: 0.5em;">
+							<h3 style="color: #E6A23C;">5 US à améliorer</h3>
+							<ul style="font-size: 0.6em; margin-left: 1.5em; margin-top: 0.3em;">
+								<li>Retour visuel réconciliation</li>
+								<li>Priorisation jobs FFAStrans</li>
+								<li>Cache arborescence NAS</li>
+								<li>Miniature plus pertinente</li>
+								<li>Filtrage secondaire recherche</li>
+							</ul>
+						</div>
 					</div>
-					<div class="feature-item fragment fade-in" style="border-left-color: #e74c3c; padding: 0.5em;">
-						<h3 style="color: #e74c3c;">3 US KO / NOK</h3>
-						<ul style="font-size: 0.6em; margin-left: 1.5em; margin-top: 0.3em;">
-							<li>Déplacement vidéo vers NAS diffusion (S-31)</li>
-							<li>Extraction métadonnées techniques FFAStrans (S-10)</li>
-							<li>Suppression vidéo (Prof/Admin)</li>
-						</ul>
-					</div>
-					<div class="feature-item fragment fade-in" style="border-left-color: #E6A23C; padding: 0.5em;">
-						<h3 style="color: #E6A23C;">5 US à améliorer</h3>
-						<ul style="font-size: 0.6em; margin-left: 1.5em; margin-top: 0.3em;">
-							<li>Retour visuel réconciliation</li>
-							<li>Priorisation jobs FFAStrans</li>
-							<li>Cache arborescence NAS</li>
-							<li>Miniature plus pertinente</li>
-							<li>Filtrage secondaire recherche</li>
-						</ul>
-					</div>
-				</div>
-				<img src="IMG_20260330_111900.webp" alt="Cahier de recettes" style="max-width: 50%; margin-top: 0.8em; border-radius: 6px;">
+					
+					<img src="IMG_20260330_111900.webp" alt="Cahier de recettes" style="max-width: 50%; margin-top: 0.8em; border-radius: 6px;">
+					
+				</section>
+				
+				<section>
+					<h3 style="color: #2C3E50; border-bottom: 2px solid #E6A23C; padding-bottom: 0.3em; display: inline-block;">Cahier de recettes</h3>
+					<img src="Recette.png" alt="Cahier de recettes" style="max-height: 600px;">
+				</section>
 			</section>
 
 			<!-- ======================== -->
@@ -648,65 +808,144 @@
 				<p style="color: rgba(255,255,255,0.9); font-size: 0.85em;">Synthèse et positionnement</p>
 			</section>
 
-			<!-- SYNTHÈSE -->
+			<!-- OUTILS DE DÉVELOPPEMENT -->
 			<section>
-				<h2 class="section-title">Synthèse</h2>
-				<div class="feature-grid">
-					<div class="feature-item fragment fade-in">
-						<h3>Performance</h3>
-						<p>Streaming HLS optimisé avec cache de miniatures</p>
+				<section>
+					<h2 class="section-title">Outils de Développement et Collaboration</h2>
+					<div class="feature-grid" style="margin-top: 1em;">
+						<div class="feature-item fragment fade-in">
+							<h3>Documentation Technique</h3>
+							<p style="margin-bottom: 0.5em;">Génération automatique avec <strong>Doxygen</strong></p>
+							<p style="font-size: 0.55em; color: #666;">Documentation complète du code PHP, classes, méthodes et relations</p>
+						</div>
+						<div class="feature-item fragment fade-in">
+							<h3>Gestion de Projet</h3>
+							<p style="margin-bottom: 0.5em;"><strong>Jira Software</strong> en méthodologie Scrum</p>
+							<p style="font-size: 0.55em; color: #666;">Backlog, sprints, burndown charts et suivi des user stories</p>
+						</div>
+						<div class="feature-item fragment fade-in">
+							<h3>Versioning de Code</h3>
+							<p style="margin-bottom: 0.5em;"><strong>GitHub</strong> avec branches et pull requests</p>
+							<p style="font-size: 0.55em; color: #666;">Workflow Git collaboratif, revues de code et historique complet</p>
+						</div>
+						<div class="feature-item fragment fade-in">
+							<h3>Tests et Qualité</h3>
+							<p style="margin-bottom: 0.5em;"><strong>PHPUnit</strong> avec couverture de code</p>
+							<p style="font-size: 0.55em; color: #666;">215 tests automatisés garantissant la stabilité de l'application</p>
+						</div>
 					</div>
-					<div class="feature-item fragment fade-in">
-						<h3>Sécurité</h3>
-						<p>Authentification Laravel Breeze + permissions basées sur les rôles</p>
-					</div>
-					<div class="feature-item fragment fade-in">
-						<h3>Automatisation</h3>
-						<p>Indexation auto, transcodage en arrière-plan, réconciliation NAS</p>
-					</div>
-					<div class="feature-item fragment fade-in">
-						<h3>Documentation</h3>
-						<p>Doxygen technique, guide utilisateur, README d'installation</p>
-					</div>
-				</div>
-				<div class="highlight-box fragment fade-in" style="margin-top: 1em;">
-					<p>
-						Solution <strong>production-ready</strong> déployée sur SERV-BTSPLAY-01 pour le quotidien du BTS Audiovisuel
+					<p style="font-size: 0.6em; color: #999; margin-top: 1em;">
+						⬇️ Aperçu des outils
 					</p>
-				</div>
-			</section>
+				</section>
 
-			<!-- PERSPECTIVES -->
-			<section>
-				<h2 class="section-title">Perspectives d'Évolution</h2>
-				<div style="display: grid; grid-template-columns: repeat(3, 1fr); gap: 1em; margin-top: 1em; text-align: left;">
-					<div class="feature-item fragment fade-left">
-						<h3>Fonctionnalités manquantes</h3>
-						<ul style="font-size: 0.65em; margin-left: 1.5em; margin-top: 0.5em;">
-							<li>Déplacement vidéo vers NAS diffusion (S-31)</li>
-							<li>Suppression de vidéos (Professeur/Admin)</li>
-							<li>Extraction métadonnées techniques via FFAStrans (S-10)</li>
-						</ul>
+				<!-- Doxygen -->
+				<section>
+					<h3 style="color: #2C3E50; border-bottom: 2px solid #E6A23C; padding-bottom: 0.3em; display: inline-block;">Documentation Doxygen</h3>
+					<p style="font-size: 0.65em; color: #666; margin-top: 0.5em; margin-bottom: 1em;">
+						Documentation technique générée automatiquement depuis les commentaires PHPDoc
+					</p>
+					<div style="text-align: left; max-width: 900px; margin: 0 auto; font-size: 0.6em;">
+						<div class="feature-item" style="margin-bottom: 0.8em;">
+							<h3>Exemple : MediaController::index()</h3>
+							<pre style="margin-top: 0.5em;"><code class="language-php" style="font-size: 0.85em;">/**
+ * @brief Affiche la liste des médias avec filtres et pagination.
+ *
+ * Récupère les paramètres de recherche depuis la requête HTTP
+ * et délègue la récupération des résultats au MediaService.
+ *
+ * @return \Illuminate\View\View Vue "home" avec liste paginée
+ */
+public function index()
+{
+    // List all media with pagination via service
+    $medias = $this->mediaService->searchMedia(request()->all());
+
+    return view('home', compact('medias'));
+}</code></pre>
+						</div>
 					</div>
-					<div class="feature-item fragment fade-left">
-						<h3>Améliorations identifiées</h3>
-						<ul style="font-size: 0.65em; margin-left: 1.5em; margin-top: 0.5em;">
-							<li>Réconciliation NAS : retour visuel (S-34)</li>
-							<li>Priorisation des jobs FFAStrans (S-36)</li>
-							<li>Cache arborescence NAS (S-67)</li>
-							<li>Choix miniature plus pertinent (S-77)</li>
-							<li>Filtrage secondaire recherche (S-74)</li>
-						</ul>
+					<div class="highlight-box" style="margin-top: 1em;">
+						<p>
+							<strong>Documentation complète disponible en ligne :</strong><br/>
+							<a href="https://brs64.github.io/Media-Asset-Manager"
+							   style="color: white; text-decoration: underline; font-size: 0.9em;"
+							   target="_blank">
+								brs64.github.io/Media-Asset-Manager
+							</a>
+						</p>
 					</div>
-					<div class="feature-item fragment fade-left">
-						<h3>Évolutions futures</h3>
-						<ul style="font-size: 0.65em; margin-left: 1.5em; margin-top: 0.5em;">
-							<li>Notifications push transcodage</li>
-							<li>API REST pour intégrations</li>
-							<li>CI/CD automatisé</li>
-						</ul>
+				</section>
+
+				<!-- Jira -->
+				<section>
+					<h3 style="color: #2C3E50; border-bottom: 2px solid #E6A23C; padding-bottom: 0.3em; display: inline-block;">Gestion de Projet Agile - Jira</h3>
+					<div style="text-align: left; max-width: 850px; margin: 1em auto;">
+						<div class="feature-grid" style="font-size: 0.65em;">
+							<div class="feature-item">
+								<h3>Backlog structuré</h3>
+								<p>User stories priorisées avec critères d'acceptation et story points</p>
+							</div>
+							<div class="feature-item">
+								<h3>Sprints de 2 semaines</h3>
+								<p>Planning poker, daily scrums et rétrospectives d'équipe</p>
+							</div>
+							<div class="feature-item">
+								<h3>Suivi de progression</h3>
+								<p>Burndown charts et vélocité pour anticiper la livraison</p>
+							</div>
+							<div class="feature-item">
+								<h3>Gestion des tâches</h3>
+								<p>États des user stories, assignations et historique des modifications</p>
+							</div>
+						</div>
+						<div class="highlight-box" style="margin-top: 1em;">
+							<p>
+								<strong>Tableau Scrum accessible ici :</strong><br/>
+								<a href="https://mam-bts.atlassian.net/jira/software/projects/SCRUM/boards/1/backlog"
+								   style="color: white; text-decoration: underline; font-size: 0.85em;"
+								   target="_blank">
+									mam-bts.atlassian.net/jira
+								</a>
+							</p>
+						</div>
 					</div>
-				</div>
+				</section>
+
+				<!-- GitHub -->
+				<section>
+					<h3 style="color: #2C3E50; border-bottom: 2px solid #E6A23C; padding-bottom: 0.3em; display: inline-block;">Versioning et Collaboration - GitHub</h3>
+					<div style="text-align: left; max-width: 850px; margin: 1em auto; font-size: 0.65em;">
+						<div class="feature-grid">
+							<div class="feature-item">
+								<h3>Workflow Git robuste</h3>
+								<p>Branches par fonctionnalité, pull requests avec revue de code obligatoire</p>
+							</div>
+							<div class="feature-item">
+								<h3>Historique complet</h3>
+								<p>182 commits traçant l'évolution du projet depuis octobre 2025</p>
+							</div>
+							<div class="feature-item">
+								<h3>Documentation README</h3>
+								<p>Guide d'installation Docker, configuration des NAS et déploiement</p>
+							</div>
+							<div class="feature-item">
+								<h3>Collaboration en équipe</h3>
+								<p>Revues de code systématiques et gestion des conflits</p>
+							</div>
+						</div>
+						<div class="highlight-box" style="margin-top: 1em;">
+							<p>
+								<strong>Dépôt GitHub du projet :</strong><br/>
+								<a href="https://github.com/brs64/Media-Asset-Manager"
+								   style="color: white; text-decoration: underline; font-size: 0.85em;"
+								   target="_blank">
+									github.com/brs64/Media-Asset-Manager
+								</a>
+							</p>
+						</div>
+					</div>
+				</section>
 			</section>
 
 			<!-- POSITIONNEMENT INDIVIDUEL -->
@@ -714,25 +953,54 @@
 				<h2 class="section-title">Positionnement Individuel</h2>
 				<div style="text-align: left; max-width: 900px; margin: 0.5em auto; font-size: 0.7em;">
 					<div class="feature-item" style="margin-bottom: 0.4em; padding: 0.5em 0.8em;">
-						<h3>Arthur BAROS <span style="font-weight: normal; font-size: 0.75em; color: #666;">- Proxy PO</span></h3>
+						<h3>Arthur BAROS <span style="font-weight: normal; font-size: 0.75em; color: #444;">- Proxy PO</span></h3>
 						<p>Relation commanditaire, documentation Doxygen, rôles et permissions Spatie</p>
 					</div>
 					<div class="feature-item" style="margin-bottom: 0.4em; padding: 0.5em 0.8em;">
-						<h3>Kamelia HAMCHOUCHE <span style="font-weight: normal; font-size: 0.75em; color: #666;">- Scrum Master</span></h3>
+						<h3>Kamelia HAMCHOUCHE <span style="font-weight: normal; font-size: 0.75em; color: #444;">- Scrum Master</span></h3>
 						<p>Pilotage agile, tests fonctionnels, gestion des utilisateurs et import CSV élèves</p>
 					</div>
 					<div class="feature-item" style="margin-bottom: 0.4em; padding: 0.5em 0.8em;">
-						<h3>David LOUSTAU-CAZAUX <span style="font-weight: normal; font-size: 0.75em; color: #666;">- Réf. Technique</span></h3>
+						<h3>David LOUSTAU-CAZAUX <span style="font-weight: normal; font-size: 0.75em; color: #444;">- Réf. Technique</span></h3>
 						<p>Architecture Docker dev/prod, tests unitaires et d'intégration, sécurisation et déploiement</p>
 					</div>
 					<div class="feature-item" style="margin-bottom: 0.4em; padding: 0.5em 0.8em;">
-						<h3>Liam LUCAS <span style="font-weight: normal; font-size: 0.75em; color: #666;">- Réf. Qualité</span></h3>
+						<h3>Liam LUCAS <span style="font-weight: normal; font-size: 0.75em; color: #444;">- Réf. Qualité</span></h3>
 						<p>Tests et documentation PHPDoc/Doxygen, gestion des miniatures, streaming, sécurisation et déploiement</p>
 					</div>
 					<div class="feature-item" style="margin-bottom: 0.4em; padding: 0.5em 0.8em;">
-						<h3>Laura Elena NUNEZ RODRIGUEZ <span style="font-weight: normal; font-size: 0.75em; color: #666;">- Réf. Frontend</span></h3>
+						<h3>Laura Elena NUNEZ RODRIGUEZ <span style="font-weight: normal; font-size: 0.75em; color: #444;">- Réf. Frontend</span></h3>
 						<p>Interface transferts et administration, transcodage par dossier, recherche et UX</p>
 					</div>
+				</div>
+			</section>
+
+			<!-- SYNTHÈSE RAPIDE -->
+			<section>
+				<h2 class="section-title">En Résumé</h2>
+				<div style="text-align: left; max-width: 900px; margin: 0.5em auto; font-size: 0.68em; line-height: 1.5;">
+					<p style="margin-bottom: 0.8em;">
+						<strong style="color: #E6A23C;">BTSPlay</strong> est un MAM professionnel développé pour répondre aux besoins réels du <strong>BTS Audiovisuel du Lycée René Cassin</strong>.
+					</p>
+					<div style="display: grid; grid-template-columns: 1fr 1fr; gap: 1em; margin-top: 1em;">
+						<div>
+							<p style="margin-bottom: 0.5em;"><strong>✓</strong> <strong>Indexation automatique</strong> de deux NAS distincts (MXF + MP4)</p>
+							<p style="margin-bottom: 0.5em;"><strong>✓</strong> <strong>Streaming HLS performant</strong> avec génération de miniatures</p>
+							<p style="margin-bottom: 0.5em;"><strong>✓</strong> <strong>Transcodage asynchrone</strong> via FFAStrans</p>
+							<p style="margin-bottom: 0.5em;"><strong>✓</strong> <strong>Permissions granulaires</strong> (Étudiants, Professeurs, Admins)</p>
+						</div>
+						<div>
+							<p style="margin-bottom: 0.5em;"><strong>✓</strong> <strong>Stack moderne</strong> : Laravel 12, Tailwind CSS, Docker</p>
+							<p style="margin-bottom: 0.5em;"><strong>✓</strong> <strong>215 tests PHPUnit</strong> avec 66% de couverture</p>
+							<p style="margin-bottom: 0.5em;"><strong>✓</strong> <strong>Déploiement sécurisé</strong> avec Tailscale VPN</p>
+							<p style="margin-bottom: 0.5em;"><strong>✓</strong> <strong>15/18 US validées</strong> en cahier de recettes</p>
+						</div>
+					</div>
+				</div>
+				<div class="highlight-box fragment fade-in" style="margin-top: 1em;">
+					<p>
+						Solution <strong>production-ready</strong> déployée sur SERV-BTSPLAY-01, utilisée au quotidien par le BTS Audiovisuel
+					</p>
 				</div>
 			</section>
 
