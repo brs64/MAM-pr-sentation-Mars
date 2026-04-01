@@ -393,8 +393,8 @@
 				</section>
 				
 				<section>
-					<h3 style="color: #2C3E50; border-bottom: 2px solid #E6A23C; padding-bottom: 0.3em; display: inline-block;">DockerFile de production</h3>
-					<img src="Schema_BTSPlay.drawio3.webp" alt="Schéma architecture BTSPlay" style="max-height: 500px; margin-top: 0.5em;">
+					<h3 style="color: #2C3E50; border-bottom: 2px solid #E6A23C; padding-bottom: 0.3em; display: inline-block;">Docker-compose de production</h3>
+					<img src="Dockerprod.png" alt="Schéma architecture BTSPlay" style="max-height: 500px; margin-top: 0.5em;">
 				</section>
 
 			</section>
@@ -469,6 +469,11 @@
 				</section>
 				
 				<section>
+					<h3 style="color: #2C3E50; border-bottom: 2px solid #E6A23C; display: inline-block;">Présentation du processus de synchronisation</h3>
+					<img src="Code-reconciliation.png" alt="Reconciliation" style="height: 610px">
+				</section>
+				
+				<section>
 					<h3 style="color: #2C3E50; border-bottom: 2px solid #E6A23C; display: inline-block;">Présentation du processus de transcodage</h3>
 					<img src="Transcodage.png" alt="Transcodage" style="max-height: 600px;">
 				</section>
@@ -480,11 +485,11 @@
 				</section>
 				
 				<section>
-					<h3 style="color: #2C3E50; border-bottom: 2px solid #E6A23C; display: inline-block;">Présentation du processus de transcodage</h3>
+					<h3 style="color: #2C3E50; border-bottom: 2px solid #E6A23C; display: inline-block;">Présentation du processus de la file d'attente</h3>
 					<img src="Attente1.png" alt="File d'attente" style="height: 600px; width: 1500px">
 				</section>
 				<section>
-					<h3 style="color: #2C3E50; border-bottom: 2px solid #E6A23C; display: inline-block;">Présentation du processus de transcodage</h3>
+					<h3 style="color: #2C3E50; border-bottom: 2px solid #E6A23C; display: inline-block;">Présentation du processus de la file d'attente</h3>
 					<img src="Attente2.png" alt="File d'attente" style="max-height: 600px;">
 				</section>
 
@@ -588,11 +593,11 @@
 					<div class="feature-grid" style="margin-top: 1em;">
 						<div class="feature-item fragment fade-in">
 							<h3>Audit des ports ouverts</h3>
-							<img src="Audit.png" alt="Audit ports" style="max-height: 600px;">
+							<img src="Audit.png" alt="Audit ports">
 						</div>
 						<div class="feature-item fragment fade-in">
 							<h3>Comptes créés</h3>
-							<img src="Groupes.png" alt="Audit ports" style="max-height: 600px;">
+							<img src="Groupes.png" alt="Audit ports">
 						</div>
 					</div>
 				</section>
@@ -608,39 +613,48 @@
 
 			<!-- CAHIER DE RECETTES -->
 			<section>
-				<h2 class="section-title">Bilan Cahier de Recettes</h2>
-				<div style="display: grid; grid-template-columns: repeat(3, 1fr); gap: 0.6em; margin-top: 0.5em; text-align: left;">
-					<div class="feature-item fragment fade-in" style="border-left-color: #27ae60; padding: 0.5em;">
-						<h3 style="color: #27ae60;">15 US OK</h3>
-						<ul style="font-size: 0.6em; margin-left: 1.5em; margin-top: 0.3em;">
-							<li>Connexion / Accès non autorisé</li>
-							<li>Consultation vidéos (Étudiant/Prof)</li>
-							<li>Modification métadonnées</li>
-							<li>Indexation, Recherche, Navigation</li>
-							<li>Réconciliation, Logs, Backup</li>
-							<li>Gestion serveurs, Création champs</li>
-						</ul>
+				<section>
+					<h2 class="section-title">Bilan Cahier de Recettes</h2>
+					<div style="display: grid; grid-template-columns: repeat(3, 1fr); gap: 0.6em; margin-top: 0.5em; text-align: left;">
+						<div class="feature-item fragment fade-in" style="border-left-color: #27ae60; padding: 0.5em;">
+							<h3 style="color: #27ae60;">15 US OK</h3>
+							<ul style="font-size: 0.6em; margin-left: 1.5em; margin-top: 0.3em;">
+								<li>Connexion / Accès non autorisé</li>
+								<li>Consultation vidéos (Étudiant/Prof)</li>
+								<li>Modification métadonnées</li>
+								<li>Indexation, Recherche, Navigation</li>
+								<li>Réconciliation, Logs, Backup</li>
+								<li>Gestion serveurs, Création champs</li>
+							</ul>
+						</div>
+						<div class="feature-item fragment fade-in" style="border-left-color: #e74c3c; padding: 0.5em;">
+							<h3 style="color: #e74c3c;">3 US KO / NOK</h3>
+							<ul style="font-size: 0.6em; margin-left: 1.5em; margin-top: 0.3em;">
+								<li>Déplacement vidéo vers NAS diffusion (S-31)</li>
+								<li>Extraction métadonnées techniques FFAStrans (S-10)</li>
+								<li>Suppression vidéo (Prof/Admin)</li>
+							</ul>
+						</div>
+						<div class="feature-item fragment fade-in" style="border-left-color: #E6A23C; padding: 0.5em;">
+							<h3 style="color: #E6A23C;">5 US à améliorer</h3>
+							<ul style="font-size: 0.6em; margin-left: 1.5em; margin-top: 0.3em;">
+								<li>Retour visuel réconciliation</li>
+								<li>Priorisation jobs FFAStrans</li>
+								<li>Cache arborescence NAS</li>
+								<li>Miniature plus pertinente</li>
+								<li>Filtrage secondaire recherche</li>
+							</ul>
+						</div>
 					</div>
-					<div class="feature-item fragment fade-in" style="border-left-color: #e74c3c; padding: 0.5em;">
-						<h3 style="color: #e74c3c;">3 US KO / NOK</h3>
-						<ul style="font-size: 0.6em; margin-left: 1.5em; margin-top: 0.3em;">
-							<li>Déplacement vidéo vers NAS diffusion (S-31)</li>
-							<li>Extraction métadonnées techniques FFAStrans (S-10)</li>
-							<li>Suppression vidéo (Prof/Admin)</li>
-						</ul>
-					</div>
-					<div class="feature-item fragment fade-in" style="border-left-color: #E6A23C; padding: 0.5em;">
-						<h3 style="color: #E6A23C;">5 US à améliorer</h3>
-						<ul style="font-size: 0.6em; margin-left: 1.5em; margin-top: 0.3em;">
-							<li>Retour visuel réconciliation</li>
-							<li>Priorisation jobs FFAStrans</li>
-							<li>Cache arborescence NAS</li>
-							<li>Miniature plus pertinente</li>
-							<li>Filtrage secondaire recherche</li>
-						</ul>
-					</div>
-				</div>
-				<img src="IMG_20260330_111900.webp" alt="Cahier de recettes" style="max-width: 50%; margin-top: 0.8em; border-radius: 6px;">
+					
+					<img src="IMG_20260330_111900.webp" alt="Cahier de recettes" style="max-width: 50%; margin-top: 0.8em; border-radius: 6px;">
+					
+				</section>
+				
+				<section>
+					<h3 style="color: #2C3E50; border-bottom: 2px solid #E6A23C; padding-bottom: 0.3em; display: inline-block;">Cahier de recettes</h3>
+					<img src="Recette.png" alt="Cahier de recettes" style="max-height: 600px;">
+				</section>
 			</section>
 
 			<!-- ======================== -->
