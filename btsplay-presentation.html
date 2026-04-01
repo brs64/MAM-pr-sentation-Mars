@@ -391,6 +391,11 @@
 					<h3 style="color: #2C3E50; border-bottom: 2px solid #E6A23C; padding-bottom: 0.3em; display: inline-block;">Schéma d'Architecture</h3>
 					<img src="Schema_BTSPlay.drawio3.webp" alt="Schéma architecture BTSPlay" style="max-height: 500px; margin-top: 0.5em;">
 				</section>
+				
+				<section>
+					<h3 style="color: #2C3E50; border-bottom: 2px solid #E6A23C; padding-bottom: 0.3em; display: inline-block;">DockerFile de production</h3>
+					<img src="Schema_BTSPlay.drawio3.webp" alt="Schéma architecture BTSPlay" style="max-height: 500px; margin-top: 0.5em;">
+				</section>
 
 			</section>
 
@@ -401,19 +406,19 @@
 					<div class="feature-grid">
 						<div class="feature-item fragment fade-right">
 							<h3>Synchronisation bi-directionnelle</h3>
-							<p>Réconcilier deux NAS avec des fichiers dans différents formats et éviter les doublons</p>
+							<p>Réconcilier des deux NAS avec des fichiers dans différents formats et éviter les doublons</p>
 						</div>
 						<div class="feature-item fragment fade-right">
-							<h3>Streaming vidéo performant</h3>
-							<p>Segmentation HLS à la volée pour des fichiers de plusieurs Go sans saturer le serveur</p>
+							<h3>Ajout de données personnalisées hétérogènes</h3>
+							<p>Stockage format JSON et ajout des éléments d'interface pour intéragir facilement avec en BDD</p>
 						</div>
 						<div class="feature-item fragment fade-right">
 							<h3>Transcodage des vidéos</h3>
-							<p>Transcodage de vidéos longues sans bloquer l'interface, avec gestion des échecs et reprises</p>
+							<p>Transcodage de vidéos longues / nombreuses sans bloquer l'interface, avec gestion des échecs et reprises</p>
 						</div>
 						<div class="feature-item fragment fade-right">
 							<h3>Permissions granulaires</h3>
-							<p>Système de rôles complexe permettant un contrôle fin des accès selon le profil utilisateur</p>
+							<p>Système de rôles adaptée permettant un contrôle fin des accès selon le profil utilisateur</p>
 						</div>
 					</div>
 					<p style="font-size: 0.6em; color: #999; margin-top: 1em;">
@@ -425,35 +430,62 @@
 				<section>
 					<h3 style="color: #2C3E50; border-bottom: 2px solid #E6A23C; padding-bottom: 0.3em; display: inline-block;">Nos Solutions</h3>
 					<div style="text-align: left; max-width: 800px; margin: 1em auto;">
+						<div class="feature-grid">
+						<div class="feature-item fragment fade-in" style="margin-top: 0.8em;">
+							<p style="font-size: 0.7em; line-height: 1.6;"><strong>Pour la synchronisation (ou réconciliation) :</strong></p>
+							<ul style="font-size: 0.65em; margin-left: 1.5em; margin-top: 0.5em;">
+								<li>Algorithme d'indéxation BDD de toutes les vidéos des différents répertoires basé sur un parcours d'arborescence récursif asynchrone</li>
+								<li>Double role de nétoyage BDD pour les vidéos qui sont supprimées des NAS / inéxistante</li>
+							</ul>
+						</div>
+						<div class="feature-item fragment fade-in" style="margin-top: 0.8em;">
+							<p style="font-size: 0.7em; line-height: 1.6;"><strong>Pour l'ajout de données:</strong></p>
+							<ul style="font-size: 0.65em; margin-left: 1.5em; margin-top: 0.5em;">
+								<li>Création d'un nouveau champs au format JSON pour chacun des médias</li>
+								<li>Ajout d'éléments d'interfaces pour l'autocompletion et possibilité d'ajouter de nouveaux élèves avec des fichiers CSV</li>
+							</ul>
+						</div>
 						<div class="feature-item fragment fade-in">
-							<p style="font-size: 0.7em; line-height: 1.6;"><strong>Pour la synchronisation :</strong></p>
+							<p style="font-size: 0.7em; line-height: 1.6;"><strong>Pour le transcodage :</strong></p>
 							<ul style="font-size: 0.65em; margin-left: 1.5em; margin-top: 0.5em;">
-								<li>Algorithme de matching par nom de fichier et métadonnées</li>
-								<li>Détection des fichiers orphelins sur chaque NAS</li>
+								<li>Implémentation d'une file d'attente pour l'envoi d'un gros volume de vidéos</li>
+								<li>Transcodage "par dossier" pour améliorer l'UX</li>
 							</ul>
 						</div>
 						<div class="feature-item fragment fade-in" style="margin-top: 0.8em;">
-							<p style="font-size: 0.7em; line-height: 1.6;"><strong>Pour le streaming :</strong></p>
+							<p style="font-size: 0.7em; line-height: 1.6;"><strong>Pour la gestion des roles :</strong></p>
 							<ul style="font-size: 0.65em; margin-left: 1.5em; margin-top: 0.5em;">
-								<li>Génération de segments HLS à la demande via contrôleur dédié</li>
-								<li>Cache des segments fréquemment demandés</li>
-								<li>Compression et optimisation des miniatures</li>
+								<li>Ajout du package Spatie au projet, qui gère la créarion de permissions personnalisées</li>
+								<li>Implémentation des roles "Admin" et "Professeur" avec des droits adaptés (vérouillage partiel du panel d'administration, ...)</li>
 							</ul>
 						</div>
-						<div class="feature-item fragment fade-in" style="margin-top: 0.8em;">
-							<p style="font-size: 0.7em; line-height: 1.6;"><strong>Pour les jobs asynchrones :</strong></p>
-							<ul style="font-size: 0.65em; margin-left: 1.5em; margin-top: 0.5em;">
-								<li>Laravel Queue avec worker dédié en container</li>
-								<li>Notifications en temps réel de l'avancement</li>
-							</ul>
 						</div>
 					</div>
+				</section>
+				
+				<section>
+					<h3 style="color: #2C3E50; border-bottom: 2px solid #E6A23C; display: inline-block;">Présentation du processus de synchronisation</h3>
+					<img src="Réconciliation.png" alt="Reconciliation" style="height: 610px">
+				</section>
+				
+				<section>
+					<h3 style="color: #2C3E50; border-bottom: 2px solid #E6A23C; display: inline-block;">Présentation du processus de transcodage</h3>
+					<img src="Transcodage.png" alt="Transcodage" style="max-height: 600px;">
 				</section>
 
 				<section>
 					<h3 style="color: #2C3E50; border-bottom: 2px solid #E6A23C; padding-bottom: 0.3em; display: inline-block;">FFAStrans</h3>
 					<p style="font-size: 0.65em; color: #666; margin-top: 0.3em;">Moteur de workflow de transcodage piloté par BTSPlay via API HTTP (port 65445)</p>
 					<img src="FFAStrans.webp" alt="FFAStrans" style="max-height: 450px; margin-top: 0.5em;">
+				</section>
+				
+				<section>
+					<h3 style="color: #2C3E50; border-bottom: 2px solid #E6A23C; display: inline-block;">Présentation du processus de transcodage</h3>
+					<img src="Attente1.png" alt="File d'attente" style="height: 600px; width: 1500px">
+				</section>
+				<section>
+					<h3 style="color: #2C3E50; border-bottom: 2px solid #E6A23C; display: inline-block;">Présentation du processus de transcodage</h3>
+					<img src="Attente2.png" alt="File d'attente" style="max-height: 600px;">
 				</section>
 
 			</section>
@@ -550,6 +582,27 @@
 						</div>
 					</div>
 				</section>
+			
+				<section>
+				<h3 style="color: #2C3E50; border-bottom: 2px solid #E6A23C; padding-bottom: 0.3em; display: inline-block;">Sécurisation</h3>
+					<div class="feature-grid" style="margin-top: 1em;">
+						<div class="feature-item fragment fade-in">
+							<h3>Audit des ports ouverts</h3>
+							<img src="Audit.png" alt="Audit ports" style="max-height: 600px;">
+						</div>
+						<div class="feature-item fragment fade-in">
+							<h3>Comptes créés</h3>
+							<img src="Groupes.png" alt="Audit ports" style="max-height: 600px;">
+						</div>
+					</div>
+				</section>
+				
+				<section>
+				<h3 style="color: #2C3E50; border-bottom: 2px solid #E6A23C; padding-bottom: 0.3em; display: inline-block;">Sécurisation</h3>
+					<h3>Configuration VPN</h3>
+					<img src="Tailscale.png" alt="Tailscale VPN" style="max-height: 600px;">
+				</section>
+				
 
 			</section>
 
