@@ -197,6 +197,44 @@
 		.reveal pre code.language-php .hljs-attr {
 			color: #005cc5 !important;
 		}
+
+		/* Container for horizontal scrolling */
+		.reveal .scroll-wrapper {
+			width: 100%;
+			height: 600px; /* Adjust based on your title height */
+			overflow-x: auto;
+			overflow-y: hidden;
+			border: 1px solid #ccc;
+			background: white;
+			/* Optional: custom scrollbar styling for better visibility */
+		}
+
+		.reveal .scroll-wrapper img {
+			height: 100%;
+			max-width: none !important; /* Forces the image to exceed slide width */
+			width: auto;
+			display: block;
+		}
+
+		/* Customizing the scrollbar to make it more "professional" */
+		.reveal .scroll-wrapper::-webkit-scrollbar {
+			height: 12px;
+		}
+		.reveal .scroll-wrapper::-webkit-scrollbar-thumb {
+			background: #E6A23C;
+			border-radius: 10px;
+		}
+		.reveal .scroll-wrapper::-webkit-scrollbar-track {
+			background: #f1f1f1;
+		}
+
+		.reveal div::-webkit-scrollbar {
+			width: 10px;
+		}
+		.reveal div::-webkit-scrollbar-thumb {
+			background: #E6A23C; 
+			border-radius: 5px;
+		}
 	</style>
 </head>
 <body>
@@ -527,14 +565,32 @@
 				</section>
 				
 				<section>
-					<h3 style="color: #2C3E50; border-bottom: 2px solid #E6A23C; display: inline-block;">Présentation du processus de la file d'attente</h3>
-					<img src="Attente1.png" alt="File d'attente" style="max-width: 130%; margin-left: -15%;">
-				</section>
-				<section>
-					<h3 style="color: #2C3E50; border-bottom: 2px solid #E6A23C; display: inline-block;">Présentation du processus de la file d'attente</h3>
-					<img src="Attente2.png" alt="File d'attente" style="max-height: 600px;">
+					<h3 style="color: #2C3E50; border-bottom: 2px solid #E6A23C; display: inline-block;">
+						Processus complet de la file d'attente
+					</h3>
+					
+					<div class="scroll-wrapper">
+						<img src="hhhaaaaaaaaaaaaaaaaaaaaaaaa.svg" alt="Processus complet file d'attente">
+					</div>
 				</section>
 
+				<section>
+					<h3 style="color: #2C3E50; border-bottom: 2px solid #E6A23C; display: inline-block;">
+						Implémentation : Job de Transcodage
+					</h3>
+					
+					<div style="height: 650px; overflow-y: auto; overflow-x: hidden; border: 1px solid #ddd; background: #fff; margin: 20px auto; border-radius: 4px; width: 95%; box-shadow: 0 4px 12px rgba(0,0,0,0.1);">
+						
+						<img src="transcodingJob_handleMethod.png" 
+							alt="Code Laravel handle method" 
+							style="width: 100% !important; 
+									height: auto !important; 
+									max-width: none !important; 
+									max-height: none !important; 
+									display: block; 
+									margin: 0;">
+					</div>
+				</section>
 			</section>
 
 			<!-- TESTS -->
