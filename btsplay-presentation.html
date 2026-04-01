@@ -154,6 +154,38 @@
 			border-radius: 3px;
 			font-size: 0.8em;
 		}
+
+		/* Override highlight.js colors for light background */
+		.reveal pre code.language-php {
+			background: #f8f9fa !important;
+			color: #24292e !important;
+		}
+
+		.reveal pre code.language-php .hljs-comment,
+		.reveal pre code.language-php .hljs-doctag {
+			color: #6a737d !important;
+		}
+
+		.reveal pre code.language-php .hljs-keyword {
+			color: #d73a49 !important;
+		}
+
+		.reveal pre code.language-php .hljs-variable {
+			color: #6f42c1 !important;
+		}
+
+		.reveal pre code.language-php .hljs-string {
+			color: #032f62 !important;
+		}
+
+		.reveal pre code.language-php .hljs-title.function_,
+		.reveal pre code.language-php .hljs-title {
+			color: #6f42c1 !important;
+		}
+
+		.reveal pre code.language-php .hljs-attr {
+			color: #005cc5 !important;
+		}
 	</style>
 </head>
 <body>
@@ -598,65 +630,144 @@
 				<p style="color: rgba(255,255,255,0.9); font-size: 0.85em;">Synthèse et positionnement</p>
 			</section>
 
-			<!-- SYNTHÈSE -->
+			<!-- OUTILS DE DÉVELOPPEMENT -->
 			<section>
-				<h2 class="section-title">Synthèse</h2>
-				<div class="feature-grid">
-					<div class="feature-item fragment fade-in">
-						<h3>Performance</h3>
-						<p>Streaming HLS optimisé avec cache de miniatures</p>
+				<section>
+					<h2 class="section-title">Outils de Développement et Collaboration</h2>
+					<div class="feature-grid" style="margin-top: 1em;">
+						<div class="feature-item fragment fade-in">
+							<h3>Documentation Technique</h3>
+							<p style="margin-bottom: 0.5em;">Génération automatique avec <strong>Doxygen</strong></p>
+							<p style="font-size: 0.55em; color: #666;">Documentation complète du code PHP, classes, méthodes et relations</p>
+						</div>
+						<div class="feature-item fragment fade-in">
+							<h3>Gestion de Projet</h3>
+							<p style="margin-bottom: 0.5em;"><strong>Jira Software</strong> en méthodologie Scrum</p>
+							<p style="font-size: 0.55em; color: #666;">Backlog, sprints, burndown charts et suivi des user stories</p>
+						</div>
+						<div class="feature-item fragment fade-in">
+							<h3>Versioning de Code</h3>
+							<p style="margin-bottom: 0.5em;"><strong>GitHub</strong> avec branches et pull requests</p>
+							<p style="font-size: 0.55em; color: #666;">Workflow Git collaboratif, revues de code et historique complet</p>
+						</div>
+						<div class="feature-item fragment fade-in">
+							<h3>Tests et Qualité</h3>
+							<p style="margin-bottom: 0.5em;"><strong>PHPUnit</strong> avec couverture de code</p>
+							<p style="font-size: 0.55em; color: #666;">215 tests automatisés garantissant la stabilité de l'application</p>
+						</div>
 					</div>
-					<div class="feature-item fragment fade-in">
-						<h3>Sécurité</h3>
-						<p>Authentification Laravel Breeze + permissions basées sur les rôles</p>
-					</div>
-					<div class="feature-item fragment fade-in">
-						<h3>Automatisation</h3>
-						<p>Indexation auto, transcodage en arrière-plan, réconciliation NAS</p>
-					</div>
-					<div class="feature-item fragment fade-in">
-						<h3>Documentation</h3>
-						<p>Doxygen technique, guide utilisateur, README d'installation</p>
-					</div>
-				</div>
-				<div class="highlight-box fragment fade-in" style="margin-top: 1em;">
-					<p>
-						Solution <strong>production-ready</strong> déployée sur SERV-BTSPLAY-01 pour le quotidien du BTS Audiovisuel
+					<p style="font-size: 0.6em; color: #999; margin-top: 1em;">
+						⬇️ Aperçu des outils
 					</p>
-				</div>
-			</section>
+				</section>
 
-			<!-- PERSPECTIVES -->
-			<section>
-				<h2 class="section-title">Perspectives d'Évolution</h2>
-				<div style="display: grid; grid-template-columns: repeat(3, 1fr); gap: 1em; margin-top: 1em; text-align: left;">
-					<div class="feature-item fragment fade-left">
-						<h3>Fonctionnalités manquantes</h3>
-						<ul style="font-size: 0.65em; margin-left: 1.5em; margin-top: 0.5em;">
-							<li>Déplacement vidéo vers NAS diffusion (S-31)</li>
-							<li>Suppression de vidéos (Professeur/Admin)</li>
-							<li>Extraction métadonnées techniques via FFAStrans (S-10)</li>
-						</ul>
+				<!-- Doxygen -->
+				<section>
+					<h3 style="color: #2C3E50; border-bottom: 2px solid #E6A23C; padding-bottom: 0.3em; display: inline-block;">Documentation Doxygen</h3>
+					<p style="font-size: 0.65em; color: #666; margin-top: 0.5em; margin-bottom: 1em;">
+						Documentation technique générée automatiquement depuis les commentaires PHPDoc
+					</p>
+					<div style="text-align: left; max-width: 900px; margin: 0 auto; font-size: 0.6em;">
+						<div class="feature-item" style="margin-bottom: 0.8em;">
+							<h3>Exemple : MediaController::index()</h3>
+							<pre style="margin-top: 0.5em;"><code class="language-php" style="font-size: 0.85em;">/**
+ * @brief Affiche la liste des médias avec filtres et pagination.
+ *
+ * Récupère les paramètres de recherche depuis la requête HTTP
+ * et délègue la récupération des résultats au MediaService.
+ *
+ * @return \Illuminate\View\View Vue "home" avec liste paginée
+ */
+public function index()
+{
+    // List all media with pagination via service
+    $medias = $this->mediaService->searchMedia(request()->all());
+
+    return view('home', compact('medias'));
+}</code></pre>
+						</div>
 					</div>
-					<div class="feature-item fragment fade-left">
-						<h3>Améliorations identifiées</h3>
-						<ul style="font-size: 0.65em; margin-left: 1.5em; margin-top: 0.5em;">
-							<li>Réconciliation NAS : retour visuel (S-34)</li>
-							<li>Priorisation des jobs FFAStrans (S-36)</li>
-							<li>Cache arborescence NAS (S-67)</li>
-							<li>Choix miniature plus pertinent (S-77)</li>
-							<li>Filtrage secondaire recherche (S-74)</li>
-						</ul>
+					<div class="highlight-box" style="margin-top: 1em;">
+						<p>
+							<strong>Documentation complète disponible en ligne :</strong><br/>
+							<a href="https://brs64.github.io/Media-Asset-Manager"
+							   style="color: white; text-decoration: underline; font-size: 0.9em;"
+							   target="_blank">
+								brs64.github.io/Media-Asset-Manager
+							</a>
+						</p>
 					</div>
-					<div class="feature-item fragment fade-left">
-						<h3>Évolutions futures</h3>
-						<ul style="font-size: 0.65em; margin-left: 1.5em; margin-top: 0.5em;">
-							<li>Notifications push transcodage</li>
-							<li>API REST pour intégrations</li>
-							<li>CI/CD automatisé</li>
-						</ul>
+				</section>
+
+				<!-- Jira -->
+				<section>
+					<h3 style="color: #2C3E50; border-bottom: 2px solid #E6A23C; padding-bottom: 0.3em; display: inline-block;">Gestion de Projet Agile - Jira</h3>
+					<div style="text-align: left; max-width: 850px; margin: 1em auto;">
+						<div class="feature-grid" style="font-size: 0.65em;">
+							<div class="feature-item">
+								<h3>Backlog structuré</h3>
+								<p>User stories priorisées avec critères d'acceptation et story points</p>
+							</div>
+							<div class="feature-item">
+								<h3>Sprints de 2 semaines</h3>
+								<p>Planning poker, daily scrums et rétrospectives d'équipe</p>
+							</div>
+							<div class="feature-item">
+								<h3>Suivi de progression</h3>
+								<p>Burndown charts et vélocité pour anticiper la livraison</p>
+							</div>
+							<div class="feature-item">
+								<h3>Gestion des tâches</h3>
+								<p>États des user stories, assignations et historique des modifications</p>
+							</div>
+						</div>
+						<div class="highlight-box" style="margin-top: 1em;">
+							<p>
+								<strong>Tableau Scrum accessible ici :</strong><br/>
+								<a href="https://mam-bts.atlassian.net/jira/software/projects/SCRUM/boards/1/backlog"
+								   style="color: white; text-decoration: underline; font-size: 0.85em;"
+								   target="_blank">
+									mam-bts.atlassian.net/jira
+								</a>
+							</p>
+						</div>
 					</div>
-				</div>
+				</section>
+
+				<!-- GitHub -->
+				<section>
+					<h3 style="color: #2C3E50; border-bottom: 2px solid #E6A23C; padding-bottom: 0.3em; display: inline-block;">Versioning et Collaboration - GitHub</h3>
+					<div style="text-align: left; max-width: 850px; margin: 1em auto; font-size: 0.65em;">
+						<div class="feature-grid">
+							<div class="feature-item">
+								<h3>Workflow Git robuste</h3>
+								<p>Branches par fonctionnalité, pull requests avec revue de code obligatoire</p>
+							</div>
+							<div class="feature-item">
+								<h3>Historique complet</h3>
+								<p>182 commits traçant l'évolution du projet depuis octobre 2025</p>
+							</div>
+							<div class="feature-item">
+								<h3>Documentation README</h3>
+								<p>Guide d'installation Docker, configuration des NAS et déploiement</p>
+							</div>
+							<div class="feature-item">
+								<h3>Collaboration en équipe</h3>
+								<p>Revues de code systématiques et gestion des conflits</p>
+							</div>
+						</div>
+						<div class="highlight-box" style="margin-top: 1em;">
+							<p>
+								<strong>Dépôt GitHub du projet :</strong><br/>
+								<a href="https://github.com/brs64/Media-Asset-Manager"
+								   style="color: white; text-decoration: underline; font-size: 0.85em;"
+								   target="_blank">
+									github.com/brs64/Media-Asset-Manager
+								</a>
+							</p>
+						</div>
+					</div>
+				</section>
 			</section>
 
 			<!-- POSITIONNEMENT INDIVIDUEL -->
@@ -683,6 +794,35 @@
 						<h3>Laura Elena NUNEZ RODRIGUEZ <span style="font-weight: normal; font-size: 0.75em; color: #666;">- Réf. Frontend</span></h3>
 						<p>Interface transferts et administration, transcodage par dossier, recherche et UX</p>
 					</div>
+				</div>
+			</section>
+
+			<!-- SYNTHÈSE RAPIDE -->
+			<section>
+				<h2 class="section-title">En Résumé</h2>
+				<div style="text-align: left; max-width: 900px; margin: 0.5em auto; font-size: 0.68em; line-height: 1.5;">
+					<p style="margin-bottom: 0.8em;">
+						<strong style="color: #E6A23C;">BTSPlay</strong> est un MAM professionnel développé pour répondre aux besoins réels du <strong>BTS Audiovisuel du Lycée René Cassin</strong>.
+					</p>
+					<div style="display: grid; grid-template-columns: 1fr 1fr; gap: 1em; margin-top: 1em;">
+						<div>
+							<p style="margin-bottom: 0.5em;"><strong>✓</strong> <strong>Indexation automatique</strong> de deux NAS distincts (MXF + MP4)</p>
+							<p style="margin-bottom: 0.5em;"><strong>✓</strong> <strong>Streaming HLS performant</strong> avec génération de miniatures</p>
+							<p style="margin-bottom: 0.5em;"><strong>✓</strong> <strong>Transcodage asynchrone</strong> via FFAStrans</p>
+							<p style="margin-bottom: 0.5em;"><strong>✓</strong> <strong>Permissions granulaires</strong> (Étudiants, Professeurs, Admins)</p>
+						</div>
+						<div>
+							<p style="margin-bottom: 0.5em;"><strong>✓</strong> <strong>Stack moderne</strong> : Laravel 12, Tailwind CSS, Docker</p>
+							<p style="margin-bottom: 0.5em;"><strong>✓</strong> <strong>215 tests PHPUnit</strong> avec 66% de couverture</p>
+							<p style="margin-bottom: 0.5em;"><strong>✓</strong> <strong>Déploiement sécurisé</strong> avec Tailscale VPN</p>
+							<p style="margin-bottom: 0.5em;"><strong>✓</strong> <strong>15/18 US validées</strong> en cahier de recettes</p>
+						</div>
+					</div>
+				</div>
+				<div class="highlight-box fragment fade-in" style="margin-top: 1em;">
+					<p>
+						Solution <strong>production-ready</strong> déployée sur SERV-BTSPLAY-01, utilisée au quotidien par le BTS Audiovisuel
+					</p>
 				</div>
 			</section>
 
