@@ -69,7 +69,7 @@
 		.reveal .feature-item p {
 			font-size: 0.65em;
 			margin: 0;
-			color: #555;
+			color: #333;
 		}
 
 		.reveal .tech-badge {
@@ -136,7 +136,7 @@
 		}
 
 		.reveal .subtitle {
-			color: #666;
+			color: #444;
 			font-size: 0.6em;
 			margin-top: 0.8em;
 		}
@@ -252,7 +252,7 @@
 			<section>
 				<h2 class="section-title">L'Équipe</h2>
 				<div style="margin-top: 1em;">
-					<p style="color: #666; margin-bottom: 1em;">
+					<p style="color: #444; margin-bottom: 1em;">
 						5 étudiants de <strong>BUT Informatique 3 - Parcours D (IAMSI)</strong>
 					</p>
 					<ul class="team-list">
@@ -320,10 +320,10 @@
 						</div>
 						<div class="feature-item fragment fade-in">
 							<h3>Admin en maintenance</h3>
-							<p>Déclencher les transcodages nécessaires via liste d'attente.</p>
+							<p>Déclenche les transcodages nécessaires via liste d'attente.</p>
 						</div>
 					</div>
-					<p style="font-size: 0.6em; color: #999; margin-top: 1em;">
+					<p style="font-size: 0.6em; color: #666; margin-top: 1em;">
 						⬇️ Scénarios avancés
 					</p>
 				</section>
@@ -357,7 +357,7 @@
 			<!-- SLIDE 5: DÉMO -->
 			<section>
 				<h2 class="section-title">Démonstration Live</h2>
-				<p style="color: #666; margin-bottom: 0.5em;">
+				<p style="color: #444; margin-bottom: 0.5em;">
 					Application en action sur <code>serv-btsplay-01:8080</code>
 				</p>
 				<div class="demo-container">
@@ -448,11 +448,11 @@
 					<div class="feature-grid">
 						<div class="feature-item fragment fade-right">
 							<h3>Synchronisation bi-directionnelle</h3>
-							<p>Réconcilier des deux NAS avec des fichiers dans différents formats et éviter les doublons</p>
+							<p>Réconcilier les deux NAS avec des fichiers dans différents formats et éviter les doublons</p>
 						</div>
 						<div class="feature-item fragment fade-right">
 							<h3>Ajout de données personnalisées hétérogènes</h3>
-							<p>Stockage format JSON et ajout des éléments d'interface pour intéragir facilement avec en BDD</p>
+							<p>Stockage format JSON et ajout des éléments d'interface pour interagir facilement avec en BDD</p>
 						</div>
 						<div class="feature-item fragment fade-right">
 							<h3>Transcodage des vidéos</h3>
@@ -460,10 +460,10 @@
 						</div>
 						<div class="feature-item fragment fade-right">
 							<h3>Permissions granulaires</h3>
-							<p>Système de rôles adaptée permettant un contrôle fin des accès selon le profil utilisateur</p>
+							<p>Système de rôles adapté permettant un contrôle fin des accès selon le profil utilisateur</p>
 						</div>
 					</div>
-					<p style="font-size: 0.6em; color: #999; margin-top: 1em;">
+					<p style="font-size: 0.6em; color: #666; margin-top: 1em;">
 						⬇️ Solutions apportées
 					</p>
 				</section>
@@ -473,32 +473,32 @@
 					<h3 style="color: #2C3E50; border-bottom: 2px solid #E6A23C; padding-bottom: 0.3em; display: inline-block;">Nos Solutions</h3>
 					<div style="text-align: left; max-width: 800px; margin: 1em auto;">
 						<div class="feature-grid">
-						<div class="feature-item fragment fade-in" style="margin-top: 0.8em;">
-							<p style="font-size: 0.7em; line-height: 1.6;"><strong>Pour la synchronisation (ou réconciliation) :</strong></p>
-							<ul style="font-size: 0.65em; margin-left: 1.5em; margin-top: 0.5em;">
-								<li>Algorithme d'indéxation BDD de toutes les vidéos des différents répertoires basé sur un parcours d'arborescence récursif asynchrone</li>
-								<li>Double role de nétoyage BDD pour les vidéos qui sont supprimées des NAS / inéxistante</li>
-							</ul>
-						</div>
-						<div class="feature-item fragment fade-in" style="margin-top: 0.8em;">
-							<p style="font-size: 0.7em; line-height: 1.6;"><strong>Pour l'ajout de données:</strong></p>
-							<ul style="font-size: 0.65em; margin-left: 1.5em; margin-top: 0.5em;">
-								<li>Création d'un nouveau champs au format JSON pour chacun des médias</li>
-								<li>Ajout d'éléments d'interfaces pour l'autocompletion et possibilité d'ajouter de nouveaux élèves avec des fichiers CSV</li>
+						<div class="feature-item fragment fade-in">
+							<p style="font-size: 0.7em; line-height: 1.6;"><strong>Synchronisation :</strong></p>
+							<ul style="font-size: 0.65em; margin-left: 1.5em; margin-top: 0.3em;">
+								<li>Indexation BDD par parcours d'arborescence récursif asynchrone</li>
+								<li>Nettoyage des médias supprimés ou inexistants sur les NAS</li>
 							</ul>
 						</div>
 						<div class="feature-item fragment fade-in">
-							<p style="font-size: 0.7em; line-height: 1.6;"><strong>Pour le transcodage :</strong></p>
-							<ul style="font-size: 0.65em; margin-left: 1.5em; margin-top: 0.5em;">
-								<li>Implémentation d'une file d'attente pour l'envoi d'un gros volume de vidéos</li>
-								<li>Transcodage "par dossier" pour améliorer l'UX</li>
+							<p style="font-size: 0.7em; line-height: 1.6;"><strong>Ajout de données :</strong></p>
+							<ul style="font-size: 0.65em; margin-left: 1.5em; margin-top: 0.3em;">
+								<li>Champs personnalisés JSON par média</li>
+								<li>Autocomplétion et import CSV d'élèves</li>
 							</ul>
 						</div>
-						<div class="feature-item fragment fade-in" style="margin-top: 0.8em;">
-							<p style="font-size: 0.7em; line-height: 1.6;"><strong>Pour la gestion des roles :</strong></p>
-							<ul style="font-size: 0.65em; margin-left: 1.5em; margin-top: 0.5em;">
-								<li>Ajout du package Spatie au projet, qui gère la créarion de permissions personnalisées</li>
-								<li>Implémentation des roles "Admin" et "Professeur" avec des droits adaptés (vérouillage partiel du panel d'administration, ...)</li>
+						<div class="feature-item fragment fade-in">
+							<p style="font-size: 0.7em; line-height: 1.6;"><strong>Transcodage :</strong></p>
+							<ul style="font-size: 0.65em; margin-left: 1.5em; margin-top: 0.3em;">
+								<li>File d'attente pour gros volumes de vidéos</li>
+								<li>Transcodage par dossier pour améliorer l'UX</li>
+							</ul>
+						</div>
+						<div class="feature-item fragment fade-in">
+							<p style="font-size: 0.7em; line-height: 1.6;"><strong>Gestion des rôles :</strong></p>
+							<ul style="font-size: 0.65em; margin-left: 1.5em; margin-top: 0.3em;">
+								<li>Spatie Permissions pour rôles et droits personnalisés</li>
+								<li>Rôles Admin et Professeur avec accès différenciés</li>
 							</ul>
 						</div>
 						</div>
@@ -522,13 +522,13 @@
 
 				<section>
 					<h3 style="color: #2C3E50; border-bottom: 2px solid #E6A23C; padding-bottom: 0.3em; display: inline-block;">FFAStrans</h3>
-					<p style="font-size: 0.65em; color: #666; margin-top: 0.3em;">Moteur de workflow de transcodage piloté par BTSPlay via API HTTP (port 65445)</p>
+					<p style="font-size: 0.65em; color: #444; margin-top: 0.3em;">Moteur de workflow de transcodage piloté par BTSPlay via API HTTP (port 65445)</p>
 					<img src="FFAStrans.webp" alt="FFAStrans" style="max-height: 450px; margin-top: 0.5em;">
 				</section>
 				
 				<section>
 					<h3 style="color: #2C3E50; border-bottom: 2px solid #E6A23C; display: inline-block;">Présentation du processus de la file d'attente</h3>
-					<img src="Attente1.png" alt="File d'attente" style="height: 600px; width: 1500px">
+					<img src="Attente1.png" alt="File d'attente" style="max-width: 130%; margin-left: -15%;">
 				</section>
 				<section>
 					<h3 style="color: #2C3E50; border-bottom: 2px solid #E6A23C; display: inline-block;">Présentation du processus de la file d'attente</h3>
@@ -564,7 +564,7 @@
 							</div>
 						</div>
 					</div>
-					<p style="font-size: 0.6em; color: #999; margin-top: 1em;">
+					<p style="font-size: 0.6em; color: #666; margin-top: 1em;">
 						⬇️ Couverture
 					</p>
 				</section>
@@ -628,23 +628,23 @@
 				</section>
 			
 				<section>
-				<h3 style="color: #2C3E50; border-bottom: 2px solid #E6A23C; padding-bottom: 0.3em; display: inline-block;">Sécurisation</h3>
-					<div class="feature-grid" style="margin-top: 1em;">
-						<div class="feature-item fragment fade-in">
-							<h3>Audit des ports ouverts</h3>
-							<img src="Audit.png" alt="Audit ports">
-						</div>
-						<div class="feature-item fragment fade-in">
-							<h3>Comptes créés</h3>
-							<img src="Groupes.png" alt="Audit ports">
-						</div>
+					<h3 style="color: #2C3E50; border-bottom: 2px solid #E6A23C; padding-bottom: 0.3em; display: inline-block;">Sécurisation - Audit des ports ouverts</h3>
+					<div class="feature-item" style="margin-top: 0.3em; max-width: 600px; margin-left: auto; margin-right: auto; padding: 0.3em;">
+						<img src="Audit.png" alt="Audit ports" style="width: 100%; border-radius: 4px; filter: saturate(1.3) contrast(1.05);">
+					</div>
+				</section>
+				<section>
+					<h3 style="color: #2C3E50; border-bottom: 2px solid #E6A23C; padding-bottom: 0.3em; display: inline-block;">Sécurisation - Comptes créés</h3>
+					<div class="feature-item" style="margin-top: 0.3em; max-width: 600px; margin-left: auto; margin-right: auto; padding: 0.3em;">
+						<img src="Groupes.png" alt="Comptes créés" style="width: 100%; border-radius: 4px;">
 					</div>
 				</section>
 				
 				<section>
-				<h3 style="color: #2C3E50; border-bottom: 2px solid #E6A23C; padding-bottom: 0.3em; display: inline-block;">Sécurisation</h3>
-					<h3>Configuration VPN</h3>
-					<img src="Tailscale.png" alt="Tailscale VPN" style="max-height: 600px;">
+					<h3 style="color: #2C3E50; border-bottom: 2px solid #E6A23C; padding-bottom: 0.3em; display: inline-block;">Sécurisation - Configuration VPN</h3>
+					<div class="feature-item" style="margin-top: 0.3em; max-width: 650px; margin-left: auto; margin-right: auto; padding-top: 0.3em; padding-bottom: 0.3em;">
+						<img src="Tailscale.png" alt="Tailscale VPN" style="max-width: 100%; border-radius: 4px;">
+					</div>
 				</section>
 				
 
@@ -849,23 +849,23 @@ public function index()
 				<h2 class="section-title">Positionnement Individuel</h2>
 				<div style="text-align: left; max-width: 900px; margin: 0.5em auto; font-size: 0.7em;">
 					<div class="feature-item" style="margin-bottom: 0.4em; padding: 0.5em 0.8em;">
-						<h3>Arthur BAROS <span style="font-weight: normal; font-size: 0.75em; color: #666;">- Proxy PO</span></h3>
+						<h3>Arthur BAROS <span style="font-weight: normal; font-size: 0.75em; color: #444;">- Proxy PO</span></h3>
 						<p>Relation commanditaire, documentation Doxygen, rôles et permissions Spatie</p>
 					</div>
 					<div class="feature-item" style="margin-bottom: 0.4em; padding: 0.5em 0.8em;">
-						<h3>Kamelia HAMCHOUCHE <span style="font-weight: normal; font-size: 0.75em; color: #666;">- Scrum Master</span></h3>
+						<h3>Kamelia HAMCHOUCHE <span style="font-weight: normal; font-size: 0.75em; color: #444;">- Scrum Master</span></h3>
 						<p>Pilotage agile, tests fonctionnels, gestion des utilisateurs et import CSV élèves</p>
 					</div>
 					<div class="feature-item" style="margin-bottom: 0.4em; padding: 0.5em 0.8em;">
-						<h3>David LOUSTAU-CAZAUX <span style="font-weight: normal; font-size: 0.75em; color: #666;">- Réf. Technique</span></h3>
+						<h3>David LOUSTAU-CAZAUX <span style="font-weight: normal; font-size: 0.75em; color: #444;">- Réf. Technique</span></h3>
 						<p>Architecture Docker dev/prod, tests unitaires et d'intégration, sécurisation et déploiement</p>
 					</div>
 					<div class="feature-item" style="margin-bottom: 0.4em; padding: 0.5em 0.8em;">
-						<h3>Liam LUCAS <span style="font-weight: normal; font-size: 0.75em; color: #666;">- Réf. Qualité</span></h3>
+						<h3>Liam LUCAS <span style="font-weight: normal; font-size: 0.75em; color: #444;">- Réf. Qualité</span></h3>
 						<p>Tests et documentation PHPDoc/Doxygen, gestion des miniatures, streaming, sécurisation et déploiement</p>
 					</div>
 					<div class="feature-item" style="margin-bottom: 0.4em; padding: 0.5em 0.8em;">
-						<h3>Laura Elena NUNEZ RODRIGUEZ <span style="font-weight: normal; font-size: 0.75em; color: #666;">- Réf. Frontend</span></h3>
+						<h3>Laura Elena NUNEZ RODRIGUEZ <span style="font-weight: normal; font-size: 0.75em; color: #444;">- Réf. Frontend</span></h3>
 						<p>Interface transferts et administration, transcodage par dossier, recherche et UX</p>
 					</div>
 				</div>
