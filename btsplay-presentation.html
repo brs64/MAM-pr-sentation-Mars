@@ -181,7 +181,31 @@
 					2025 - 2026
 				</p>
 			</section>
-
+<!-- SLIDE 2: L'ÉQUIPE -->
+			<section>
+				<h2 class="section-title">L'Équipe</h2>
+				<div style="margin-top: 1em;">
+					<p style="color: #666; margin-bottom: 1em;">
+						5 étudiants de <strong>BUT Informatique 3 - Parcours D (IAMSI)</strong>
+					</p>
+					<ul class="team-list">
+						<li><strong>BAROS Arthur</strong> - Proxy PO</li>
+						<li><strong>HAMCHOUCHE Kamelia</strong> - Scrum Master</li>
+						<li><strong>LOUSTAU-CAZAUX David</strong> - Réf. Technique</li>
+						<li><strong>LUCAS Liam</strong> - Réf. Qualité</li>
+						<li><strong>NUNEZ RODRIGUEZ Laura Elena</strong> - Réf. Frontend</li>
+					</ul>
+					<div class="highlight-box" style="margin-top: 1.5em;">
+						<p>
+							<strong>IUT de Bayonne</strong> - SAÉ S.6.01 - 2025-2026<br/>
+							Commanditaire : M. MARTIN Philippe (BTS Audiovisuel Lycée René Cassin)<br/>
+							<a href="https://github.com/brs64/Media-Asset-Manager" style="color: white; text-decoration: underline;" target="_blank">
+								github.com/brs64/Media-Asset-Manager
+							</a>
+						</p>
+					</div>
+				</div>
+			</section>
 			<!-- ======================== -->
 			<!-- PARTIE 1: INTRODUCTIVE  -->
 			<!-- ======================== -->
@@ -211,62 +235,85 @@
 				</div>
 			</section>
 
-			<!-- SLIDE 3: L'ÉQUIPE -->
-			<section>
-				<h2 class="section-title">L'Équipe</h2>
-				<div style="margin-top: 1em;">
-					<p style="color: #666; margin-bottom: 1em;">
-						5 étudiants de <strong>BUT Informatique 3 - Parcours D (IAMSI)</strong>
-					</p>
-					<ul class="team-list">
-						<li><strong>BAROS Arthur</strong> - Proxy PO</li>
-						<li><strong>HAMCHOUCHE Kamelia</strong> - Scrum Master</li>
-						<li><strong>LOUSTAU-CAZAUX David</strong> - Réf. Technique</li>
-						<li><strong>LUCAS Liam</strong> - Réf. Qualité</li>
-						<li><strong>NUNEZ RODRIGUEZ Laura Elena</strong> - Réf. Frontend</li>
-					</ul>
-					<div class="highlight-box" style="margin-top: 1.5em;">
-						<p>
-							<strong>IUT de Bayonne</strong> - SAÉ S.6.01 - 2025-2026<br/>
-							Commanditaire : M. MARTIN Philippe (BTS Audiovisuel Lycée René Cassin)<br/>
-							<a href="https://github.com/brs64/Media-Asset-Manager" style="color: white; text-decoration: underline;" target="_blank">
-								github.com/brs64/Media-Asset-Manager
-							</a>
-						</p>
-					</div>
-				</div>
-			</section>
+<section>
+    <section>
+        <h2 class="section-title">Fonctionnalités Clés</h2>
+        
+        <div style="margin-bottom: 1.2em; text-align: center; font-size: 0.65em; font-weight: bold;">
+            <span style="border-left: 12px solid #E6A23C; padding-left: 8px; margin-right: 30px;">S.5</span>
+            <span style="border-left: 12px solid #C71585; padding-left: 8px;">S.6</span>
+        </div>
 
-			<!-- FONCTIONNALITÉS -->
-			<section>
-				<h2 class="section-title">Fonctionnalités Clés</h2>
-				<div class="feature-grid">
-					<div class="feature-item fragment fade-up">
-						<h3>Découverte & Indexation</h3>
-						<p>Indexation automatique des vidéos sur les deux NAS avec réconciliation intelligente</p>
-					</div>
-					<div class="feature-item fragment fade-up">
-						<h3>Lecture Vidéo Web</h3>
-						<p>Streaming HLS adaptatif avec génération de miniatures</p>
-					</div>
-					<div class="feature-item fragment fade-up">
-						<h3>Transcodage Professionnel</h3>
-						<p>Intégration FFAStrans pour conversion MXF ↔ MP4</p>
-					</div>
-					<div class="feature-item fragment fade-up">
-						<h3>Gestion des Utilisateurs</h3>
-						<p>Authentification et permissions (Étudiants, Professeurs, Admins)</p>
-					</div>
-					<div class="feature-item fragment fade-up">
-						<h3>Recherche Avancée</h3>
-						<p>Moteur de recherche avec filtrage</p>
-					</div>
-					<div class="feature-item fragment fade-up">
-						<h3>Panel Administrateur</h3>
-						<p>Synchronisation, réconciliation, logs, backups et import CSV d'élèves</p>
-					</div>
-				</div>
-			</section>
+        <div style="display: grid; grid-template-columns: repeat(2, 1fr); gap: 1em;">
+            <div class="feature-item fragment fade-up" style="border-left: 5px solid #E6A23C; padding: 1.2em;">
+                <h3 style="font-size: 1.3em;">Découverte & Indexation</h3>
+                <p style="font-size: 0.8em;">Scan récursif des NAS pour lier les fichiers physiques à la base de données avec détection automatique des nouveaux médias.</p>
+            </div>
+            <div class="feature-item fragment fade-up" style="border-left: 5px solid #C71585; padding: 1.2em;">
+                <h3 style="font-size: 1.3em;">Transcodage Professionnel</h3>
+                <p style="font-size: 0.8em;">
+                    Mise en place d'une <strong>file d'attente (Queue)</strong> robuste pour traiter des fichiers volumineux ou des <strong>dossiers complets</strong> en arrière-plan.
+                </p>
+            </div>
+        </div>
+
+        <div style="display: grid; grid-template-columns: repeat(2, 1fr); gap: 0.8em; margin-top: 0.8em;">
+            <div class="feature-item fragment fade-up" style="border-left: 3px solid #E6A23C; padding: 0.6em;">
+                <h3 style="font-size: 0.9em;">Lecture Vidéo Web</h3>
+                <p style="font-size: 0.6em;">Streaming HLS adaptatif et miniatures</p>
+            </div>
+            <div class="feature-item fragment fade-up" style="border-left: 3px solid #C71585; padding: 0.6em;">
+                <h3 style="font-size: 0.9em;">Gestion Utilisateurs</h3>
+                <p style="font-size: 0.6em;">Permissions sur mesure : Étudiants, Professeurs et Admins.</p>
+            </div>
+            <div class="feature-item fragment fade-up" style="border-left: 3px solid #C71585; padding: 0.6em;">
+                <h3 style="font-size: 0.9em;">Recherche Avancée</h3>
+                <p style="font-size: 0.6em;">Moteur de recherche avec ajout de filtrage multi-critères.</p>
+            </div>
+            <div class="feature-item fragment fade-up" style="border-left: 3px solid #C71585; padding: 0.6em;">
+                <h3 style="font-size: 0.9em;">Panel Administrateur</h3>
+                <p style="font-size: 0.6em;">Création d'élèves (individuelle ou import groupé via CSV).</p>
+            </div>
+        </div>
+        <p style="font-size: 0.5em; color: #999; margin-top: 1em;">⬇️ Voir les preuves techniques</p>
+    </section>
+
+<section>
+    <h2 class="section-title">Preuves de Développement</h2>
+    
+    <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 1.5em; margin-top: 1em; align-items: start;">
+        
+        <div class="fragment fade-up" style="text-align: center;">
+            <h3 style="font-size: 0.9em; color: #2C3E50; margin-bottom: 0.5em;">Recherche avec filtres</h3>
+            
+            <img src="image1.png" alt="Code Laravel de recherche" 
+                 style="width: 100%; max-height: 400px; object-fit: contain; 
+                        border-radius: 4px; border: 1px solid #ddd; 
+                        box-shadow: 0 2px 4px rgba(0,0,0,0.1);">
+            
+        
+        </div>
+
+        <div class="fragment fade-up" style="text-align: center;">
+            <h3 style="font-size: 0.9em; color: #2C3E50; margin-bottom: 0.5em;">Importation élèves CSV</h3>
+            
+            <img src="image2.png" alt="Code PHP d'import CSV" 
+                 style="width: 100%; max-height: 400px; object-fit: contain; 
+                        border-radius: 4px; border: 1px solid #ddd; 
+                        box-shadow: 0 2px 4px rgba(0,0,0,0.1);">
+            
+          
+        </div>
+    </div>
+
+    <div class="highlight-box fragment zoom-in" style="margin-top: 1.5em; background: #2C3E50;">
+        <p style="font-size: 0.7em; text-align: center;">
+            <strong>Note :</strong> Les pilier technique
+            <strong>Transcodage</strong> sera détaillé spécifiquement dans la suite de la présentation.
+        </p>
+    </div>
+</section>
+</section>
 
 			<!-- CAS D'USAGE -->
 			<section>
